@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Packet\item.pb.cc">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet\messageHeader.pb.cc">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet\system.pb.cc">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="RPing.cpp">
+      <Filter>Route\Ping</Filter>
+    </ClCompile>
+    <ClCompile Include="RConnection.cpp">
+      <Filter>Route\Connection</Filter>
+    </ClCompile>
+    <ClCompile Include="RouteInjector.h">
+      <Filter>Route</Filter>
+    </ClCompile>
+    <ClCompile Include="ManagerProvider.h">
+      <Filter>Provider</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketDefine.h">
+      <Filter>Define</Filter>
+    </ClCompile>
+    <ClCompile Include="unity.cpp">
+      <Filter>Define</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketManager.cpp">
+      <Filter>ServerNetwork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="RReplicationPlayer.cpp">
+      <Filter>Route\Replicated\Player</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ServerNetwork\IOCPServer.h">
+      <Filter>ServerNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\system.pb.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\item.pb.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\messageHeader.pb.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Route.h">
+      <Filter>Route</Filter>
+    </ClInclude>
+    <ClInclude Include="RPing.h">
+      <Filter>Route\Ping</Filter>
+    </ClInclude>
+    <ClInclude Include="RConnection.h">
+      <Filter>Route\Connection</Filter>
+    </ClInclude>
+    <ClInclude Include="CRedisConnEx.h">
+      <Filter>ServerNetwork\Redis</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerNetwork\Define.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorCode.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="unity.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>ServerNetwork\User</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerNetwork\ClientInfo.h">
+      <Filter>ServerNetwork\User</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServer.h">
+      <Filter>ServerNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketManager.h">
+      <Filter>ServerNetwork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="RedisManager.h">
+      <Filter>ServerNetwork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="UserManager.h">
+      <Filter>ServerNetwork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="RedisTaskDefine.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="RReplicationPlayer.h">
+      <Filter>Route\Replicated\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ServerNetwork">
+      <UniqueIdentifier>{1fc0f584-76ea-4096-9ebc-805fceb35389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet">
+      <UniqueIdentifier>{9f9a9dee-5a65-437f-93cb-8e109f30f94d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Route">
+      <UniqueIdentifier>{a92014f3-232e-4a2a-8d15-23b4e051ff55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Route\Ping">
+      <UniqueIdentifier>{f5d87a88-2d2d-4840-b403-6cf54c4adabc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Route\Connection">
+      <UniqueIdentifier>{4e4313ae-4752-4e87-9d0c-bb8522d70173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Provider">
+      <UniqueIdentifier>{96e24147-9304-4d0e-a2f0-11a3b417fec2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Define">
+      <UniqueIdentifier>{619e7a3c-a379-47a9-86bb-9d5238637d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerNetwork\User">
+      <UniqueIdentifier>{d1772553-afb3-450c-983d-63c04aa1eb16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerNetwork\Redis">
+      <UniqueIdentifier>{e88a6749-7fe4-4147-91da-e0ef5fb6799f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerNetwork\Manager">
+      <UniqueIdentifier>{00f34cc3-aba6-42b8-a7c4-4f4c28069c2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Route\Replicated">
+      <UniqueIdentifier>{4047c181-a911-4eeb-88a7-71373394c467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Route\Replicated\Player">
+      <UniqueIdentifier>{194294f7-eac8-4e2b-af0f-7c06c6cf5ea2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

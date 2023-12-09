@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package CKPacket;
+
+message messageHeader {
+	optional uint32 userId = 1;
+	optional string type = 2;
+	optional bytes arr = 3;
+	optional uint32 arrSize = 4;
+}

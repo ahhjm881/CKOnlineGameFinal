@@ -1,0 +1,16 @@
+{
+    "name": "Replication",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7e9be603308094c438abff39253e4252"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

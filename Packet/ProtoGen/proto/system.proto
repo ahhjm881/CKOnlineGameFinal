@@ -1,0 +1,16 @@
+syntax = "proto3";
+package CKPacket;
+
+message Invalid {
+
+}
+message SystemEnd {
+
+}
+
+message SYSTEM_USER_DISCONNECT {
+
+}
+message SYSTEM_USER_CONNECT{
+
+}

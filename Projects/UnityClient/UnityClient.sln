@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network", "Network.csproj", "{35beaa9e-fecb-c705-8220-794adff39408}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{67109e6c-d345-518d-00c4-572c36c1182e}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replication", "Replication.csproj", "{1ed4e03d-fddd-eedb-da49-dabc848c3e1c}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{547289fd-a684-775d-5c6d-7a8f123ecc46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35beaa9e-fecb-c705-8220-794adff39408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35beaa9e-fecb-c705-8220-794adff39408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67109e6c-d345-518d-00c4-572c36c1182e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67109e6c-d345-518d-00c4-572c36c1182e}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ed4e03d-fddd-eedb-da49-dabc848c3e1c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ed4e03d-fddd-eedb-da49-dabc848c3e1c}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547289fd-a684-775d-5c6d-7a8f123ecc46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547289fd-a684-775d-5c6d-7a8f123ecc46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
