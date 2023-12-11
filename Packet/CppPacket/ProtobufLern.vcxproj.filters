@@ -28,8 +28,5 @@
     <ClInclude Include="PacketDefine.h">
       <Filter>source\packet</Filter>
     </ClInclude>
-    <ClInclude Include="test.h">
-      <Filter>source\test</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

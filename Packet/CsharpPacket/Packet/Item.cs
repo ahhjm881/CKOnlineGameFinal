@@ -34,8 +34,14 @@ namespace CKPacket {
             "eWVyR2VuEhIKBWluZGV4GAEgASgFSACIAQFCCAoGX2luZGV4IjYKFnJlc1Jl",
             "cGxpY2F0ZWRQbGF5ZXJEZXMSEgoFaW5kZXgYASABKAVIAIgBAUIICgZfaW5k",
             "ZXgiGAoWcmVxUmVwbGljYXRlZFBsYXllckdlbiI2ChZyZXFSZXBsaWNhdGVk",
-            "UGxheWVyRGVzEhIKBWluZGV4GAEgASgFSACIAQFCCAoGX2luZGV4YgZwcm90",
-            "bzM="));
+            "UGxheWVyRGVzEhIKBWluZGV4GAEgASgFSACIAQFCCAoGX2luZGV4IowBChRy",
+            "ZXFDaGFuZ2VQbGF5ZXJDb2xvchISCgVpbmRleBgBIAEoBUgAiAEBEg4KAVIY",
+            "AiABKAJIAYgBARIOCgFHGAMgASgCSAKIAQESDgoBQhgEIAEoAkgDiAEBEg4K",
+            "AUEYBSABKAJIBIgBAUIICgZfaW5kZXhCBAoCX1JCBAoCX0dCBAoCX0JCBAoC",
+            "X0EijAEKFHJlc0NoYW5nZVBsYXllckNvbG9yEhIKBWluZGV4GAEgASgFSACI",
+            "AQESDgoBUhgCIAEoAkgBiAEBEg4KAUcYAyABKAJIAogBARIOCgFCGAQgASgC",
+            "SAOIAQESDgoBQRgFIAEoAkgEiAEBQggKBl9pbmRleEIECgJfUkIECgJfR0IE",
+            "CgJfQkIECgJfQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -47,7 +53,9 @@ namespace CKPacket {
             new pbr::GeneratedClrTypeInfo(typeof(global::CKPacket.resReplicatedPlayerGen), global::CKPacket.resReplicatedPlayerGen.Parser, new[]{ "Index" }, new[]{ "Index" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::CKPacket.resReplicatedPlayerDes), global::CKPacket.resReplicatedPlayerDes.Parser, new[]{ "Index" }, new[]{ "Index" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::CKPacket.reqReplicatedPlayerGen), global::CKPacket.reqReplicatedPlayerGen.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::CKPacket.reqReplicatedPlayerDes), global::CKPacket.reqReplicatedPlayerDes.Parser, new[]{ "Index" }, new[]{ "Index" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::CKPacket.reqReplicatedPlayerDes), global::CKPacket.reqReplicatedPlayerDes.Parser, new[]{ "Index" }, new[]{ "Index" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::CKPacket.reqChangePlayerColor), global::CKPacket.reqChangePlayerColor.Parser, new[]{ "Index", "R", "G", "B", "A" }, new[]{ "Index", "R", "G", "B", "A" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::CKPacket.resChangePlayerColor), global::CKPacket.resChangePlayerColor.Parser, new[]{ "Index", "R", "G", "B", "A" }, new[]{ "Index", "R", "G", "B", "A" }, null, null, null)
           }));
     }
     #endregion
@@ -1973,6 +1981,814 @@ namespace CKPacket {
             break;
           case 8: {
             Index = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class reqChangePlayerColor : pb::IMessage<reqChangePlayerColor>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<reqChangePlayerColor> _parser = new pb::MessageParser<reqChangePlayerColor>(() => new reqChangePlayerColor());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<reqChangePlayerColor> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CKPacket.ItemReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public reqChangePlayerColor() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public reqChangePlayerColor(reqChangePlayerColor other) : this() {
+      _hasBits0 = other._hasBits0;
+      index_ = other.index_;
+      r_ = other.r_;
+      g_ = other.g_;
+      b_ = other.b_;
+      a_ = other.a_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public reqChangePlayerColor Clone() {
+      return new reqChangePlayerColor(this);
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 1;
+    private int index_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Index {
+      get { if ((_hasBits0 & 1) != 0) { return index_; } else { return 0; } }
+      set {
+        _hasBits0 |= 1;
+        index_ = value;
+      }
+    }
+    /// <summary>Gets whether the "index" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIndex {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "index" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIndex() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "R" field.</summary>
+    public const int RFieldNumber = 2;
+    private float r_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float R {
+      get { if ((_hasBits0 & 2) != 0) { return r_; } else { return 0F; } }
+      set {
+        _hasBits0 |= 2;
+        r_ = value;
+      }
+    }
+    /// <summary>Gets whether the "R" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasR {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "R" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearR() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "G" field.</summary>
+    public const int GFieldNumber = 3;
+    private float g_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float G {
+      get { if ((_hasBits0 & 4) != 0) { return g_; } else { return 0F; } }
+      set {
+        _hasBits0 |= 4;
+        g_ = value;
+      }
+    }
+    /// <summary>Gets whether the "G" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasG {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "G" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearG() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "B" field.</summary>
+    public const int BFieldNumber = 4;
+    private float b_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float B {
+      get { if ((_hasBits0 & 8) != 0) { return b_; } else { return 0F; } }
+      set {
+        _hasBits0 |= 8;
+        b_ = value;
+      }
+    }
+    /// <summary>Gets whether the "B" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasB {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "B" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearB() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "A" field.</summary>
+    public const int AFieldNumber = 5;
+    private float a_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float A {
+      get { if ((_hasBits0 & 16) != 0) { return a_; } else { return 0F; } }
+      set {
+        _hasBits0 |= 16;
+        a_ = value;
+      }
+    }
+    /// <summary>Gets whether the "A" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasA {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "A" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearA() {
+      _hasBits0 &= ~16;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as reqChangePlayerColor);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(reqChangePlayerColor other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Index != other.Index) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(R, other.R)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(G, other.G)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(B, other.B)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(A, other.A)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasIndex) hash ^= Index.GetHashCode();
+      if (HasR) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(R);
+      if (HasG) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(G);
+      if (HasB) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(B);
+      if (HasA) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(A);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasIndex) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Index);
+      }
+      if (HasR) {
+        output.WriteRawTag(21);
+        output.WriteFloat(R);
+      }
+      if (HasG) {
+        output.WriteRawTag(29);
+        output.WriteFloat(G);
+      }
+      if (HasB) {
+        output.WriteRawTag(37);
+        output.WriteFloat(B);
+      }
+      if (HasA) {
+        output.WriteRawTag(45);
+        output.WriteFloat(A);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasIndex) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Index);
+      }
+      if (HasR) {
+        output.WriteRawTag(21);
+        output.WriteFloat(R);
+      }
+      if (HasG) {
+        output.WriteRawTag(29);
+        output.WriteFloat(G);
+      }
+      if (HasB) {
+        output.WriteRawTag(37);
+        output.WriteFloat(B);
+      }
+      if (HasA) {
+        output.WriteRawTag(45);
+        output.WriteFloat(A);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasIndex) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (HasR) {
+        size += 1 + 4;
+      }
+      if (HasG) {
+        size += 1 + 4;
+      }
+      if (HasB) {
+        size += 1 + 4;
+      }
+      if (HasA) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(reqChangePlayerColor other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasIndex) {
+        Index = other.Index;
+      }
+      if (other.HasR) {
+        R = other.R;
+      }
+      if (other.HasG) {
+        G = other.G;
+      }
+      if (other.HasB) {
+        B = other.B;
+      }
+      if (other.HasA) {
+        A = other.A;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Index = input.ReadInt32();
+            break;
+          }
+          case 21: {
+            R = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            G = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            B = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            A = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Index = input.ReadInt32();
+            break;
+          }
+          case 21: {
+            R = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            G = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            B = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            A = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class resChangePlayerColor : pb::IMessage<resChangePlayerColor>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<resChangePlayerColor> _parser = new pb::MessageParser<resChangePlayerColor>(() => new resChangePlayerColor());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<resChangePlayerColor> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CKPacket.ItemReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public resChangePlayerColor() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public resChangePlayerColor(resChangePlayerColor other) : this() {
+      _hasBits0 = other._hasBits0;
+      index_ = other.index_;
+      r_ = other.r_;
+      g_ = other.g_;
+      b_ = other.b_;
+      a_ = other.a_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public resChangePlayerColor Clone() {
+      return new resChangePlayerColor(this);
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 1;
+    private int index_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Index {
+      get { if ((_hasBits0 & 1) != 0) { return index_; } else { return 0; } }
+      set {
+        _hasBits0 |= 1;
+        index_ = value;
+      }
+    }
+    /// <summary>Gets whether the "index" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIndex {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "index" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIndex() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "R" field.</summary>
+    public const int RFieldNumber = 2;
+    private float r_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float R {
+      get { if ((_hasBits0 & 2) != 0) { return r_; } else { return 0F; } }
+      set {
+        _hasBits0 |= 2;
+        r_ = value;
+      }
+    }
+    /// <summary>Gets whether the "R" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasR {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "R" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearR() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "G" field.</summary>
+    public const int GFieldNumber = 3;
+    private float g_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float G {
+      get { if ((_hasBits0 & 4) != 0) { return g_; } else { return 0F; } }
+      set {
+        _hasBits0 |= 4;
+        g_ = value;
+      }
+    }
+    /// <summary>Gets whether the "G" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasG {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "G" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearG() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "B" field.</summary>
+    public const int BFieldNumber = 4;
+    private float b_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float B {
+      get { if ((_hasBits0 & 8) != 0) { return b_; } else { return 0F; } }
+      set {
+        _hasBits0 |= 8;
+        b_ = value;
+      }
+    }
+    /// <summary>Gets whether the "B" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasB {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "B" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearB() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "A" field.</summary>
+    public const int AFieldNumber = 5;
+    private float a_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float A {
+      get { if ((_hasBits0 & 16) != 0) { return a_; } else { return 0F; } }
+      set {
+        _hasBits0 |= 16;
+        a_ = value;
+      }
+    }
+    /// <summary>Gets whether the "A" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasA {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "A" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearA() {
+      _hasBits0 &= ~16;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as resChangePlayerColor);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(resChangePlayerColor other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Index != other.Index) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(R, other.R)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(G, other.G)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(B, other.B)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(A, other.A)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasIndex) hash ^= Index.GetHashCode();
+      if (HasR) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(R);
+      if (HasG) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(G);
+      if (HasB) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(B);
+      if (HasA) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(A);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasIndex) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Index);
+      }
+      if (HasR) {
+        output.WriteRawTag(21);
+        output.WriteFloat(R);
+      }
+      if (HasG) {
+        output.WriteRawTag(29);
+        output.WriteFloat(G);
+      }
+      if (HasB) {
+        output.WriteRawTag(37);
+        output.WriteFloat(B);
+      }
+      if (HasA) {
+        output.WriteRawTag(45);
+        output.WriteFloat(A);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasIndex) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Index);
+      }
+      if (HasR) {
+        output.WriteRawTag(21);
+        output.WriteFloat(R);
+      }
+      if (HasG) {
+        output.WriteRawTag(29);
+        output.WriteFloat(G);
+      }
+      if (HasB) {
+        output.WriteRawTag(37);
+        output.WriteFloat(B);
+      }
+      if (HasA) {
+        output.WriteRawTag(45);
+        output.WriteFloat(A);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasIndex) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (HasR) {
+        size += 1 + 4;
+      }
+      if (HasG) {
+        size += 1 + 4;
+      }
+      if (HasB) {
+        size += 1 + 4;
+      }
+      if (HasA) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(resChangePlayerColor other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasIndex) {
+        Index = other.Index;
+      }
+      if (other.HasR) {
+        R = other.R;
+      }
+      if (other.HasG) {
+        G = other.G;
+      }
+      if (other.HasB) {
+        B = other.B;
+      }
+      if (other.HasA) {
+        A = other.A;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Index = input.ReadInt32();
+            break;
+          }
+          case 21: {
+            R = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            G = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            B = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            A = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Index = input.ReadInt32();
+            break;
+          }
+          case 21: {
+            R = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            G = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            B = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            A = input.ReadFloat();
             break;
           }
         }

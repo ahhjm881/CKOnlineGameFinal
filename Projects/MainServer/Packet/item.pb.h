@@ -46,6 +46,9 @@ struct TableStruct_item_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_item_2eproto;
 namespace CKPacket {
+class reqChangePlayerColor;
+struct reqChangePlayerColorDefaultTypeInternal;
+extern reqChangePlayerColorDefaultTypeInternal _reqChangePlayerColor_default_instance_;
 class reqPing;
 struct reqPingDefaultTypeInternal;
 extern reqPingDefaultTypeInternal _reqPing_default_instance_;
@@ -58,6 +61,9 @@ extern reqReplicatedPlayerDesDefaultTypeInternal _reqReplicatedPlayerDes_default
 class reqReplicatedPlayerGen;
 struct reqReplicatedPlayerGenDefaultTypeInternal;
 extern reqReplicatedPlayerGenDefaultTypeInternal _reqReplicatedPlayerGen_default_instance_;
+class resChangePlayerColor;
+struct resChangePlayerColorDefaultTypeInternal;
+extern resChangePlayerColorDefaultTypeInternal _resChangePlayerColor_default_instance_;
 class resPing;
 struct resPingDefaultTypeInternal;
 extern resPingDefaultTypeInternal _resPing_default_instance_;
@@ -75,10 +81,12 @@ struct resReplicatedPlayerGenDefaultTypeInternal;
 extern resReplicatedPlayerGenDefaultTypeInternal _resReplicatedPlayerGen_default_instance_;
 }  // namespace CKPacket
 PROTOBUF_NAMESPACE_OPEN
+template<> ::CKPacket::reqChangePlayerColor* Arena::CreateMaybeMessage<::CKPacket::reqChangePlayerColor>(Arena*);
 template<> ::CKPacket::reqPing* Arena::CreateMaybeMessage<::CKPacket::reqPing>(Arena*);
 template<> ::CKPacket::reqPlayerPosition* Arena::CreateMaybeMessage<::CKPacket::reqPlayerPosition>(Arena*);
 template<> ::CKPacket::reqReplicatedPlayerDes* Arena::CreateMaybeMessage<::CKPacket::reqReplicatedPlayerDes>(Arena*);
 template<> ::CKPacket::reqReplicatedPlayerGen* Arena::CreateMaybeMessage<::CKPacket::reqReplicatedPlayerGen>(Arena*);
+template<> ::CKPacket::resChangePlayerColor* Arena::CreateMaybeMessage<::CKPacket::resChangePlayerColor>(Arena*);
 template<> ::CKPacket::resPing* Arena::CreateMaybeMessage<::CKPacket::resPing>(Arena*);
 template<> ::CKPacket::resPlayerJoin* Arena::CreateMaybeMessage<::CKPacket::resPlayerJoin>(Arena*);
 template<> ::CKPacket::resPlayerPosition* Arena::CreateMaybeMessage<::CKPacket::resPlayerPosition>(Arena*);
@@ -1414,6 +1422,432 @@ class reqReplicatedPlayerDes final :
   union { Impl_ _impl_; };
   friend struct ::TableStruct_item_2eproto;
 };
+// -------------------------------------------------------------------
+
+class reqChangePlayerColor final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CKPacket.reqChangePlayerColor) */ {
+ public:
+  inline reqChangePlayerColor() : reqChangePlayerColor(nullptr) {}
+  ~reqChangePlayerColor() override;
+  explicit PROTOBUF_CONSTEXPR reqChangePlayerColor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  reqChangePlayerColor(const reqChangePlayerColor& from);
+  reqChangePlayerColor(reqChangePlayerColor&& from) noexcept
+    : reqChangePlayerColor() {
+    *this = ::std::move(from);
+  }
+
+  inline reqChangePlayerColor& operator=(const reqChangePlayerColor& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline reqChangePlayerColor& operator=(reqChangePlayerColor&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const reqChangePlayerColor& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const reqChangePlayerColor* internal_default_instance() {
+    return reinterpret_cast<const reqChangePlayerColor*>(
+               &_reqChangePlayerColor_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  friend void swap(reqChangePlayerColor& a, reqChangePlayerColor& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(reqChangePlayerColor* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(reqChangePlayerColor* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  reqChangePlayerColor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<reqChangePlayerColor>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const reqChangePlayerColor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const reqChangePlayerColor& from) {
+    reqChangePlayerColor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(reqChangePlayerColor* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CKPacket.reqChangePlayerColor";
+  }
+  protected:
+  explicit reqChangePlayerColor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIndexFieldNumber = 1,
+    kRFieldNumber = 2,
+    kGFieldNumber = 3,
+    kBFieldNumber = 4,
+    kAFieldNumber = 5,
+  };
+  // optional int32 index = 1;
+  bool has_index() const;
+  private:
+  bool _internal_has_index() const;
+  public:
+  void clear_index();
+  int32_t index() const;
+  void set_index(int32_t value);
+  private:
+  int32_t _internal_index() const;
+  void _internal_set_index(int32_t value);
+  public:
+
+  // optional float R = 2;
+  bool has_r() const;
+  private:
+  bool _internal_has_r() const;
+  public:
+  void clear_r();
+  float r() const;
+  void set_r(float value);
+  private:
+  float _internal_r() const;
+  void _internal_set_r(float value);
+  public:
+
+  // optional float G = 3;
+  bool has_g() const;
+  private:
+  bool _internal_has_g() const;
+  public:
+  void clear_g();
+  float g() const;
+  void set_g(float value);
+  private:
+  float _internal_g() const;
+  void _internal_set_g(float value);
+  public:
+
+  // optional float B = 4;
+  bool has_b() const;
+  private:
+  bool _internal_has_b() const;
+  public:
+  void clear_b();
+  float b() const;
+  void set_b(float value);
+  private:
+  float _internal_b() const;
+  void _internal_set_b(float value);
+  public:
+
+  // optional float A = 5;
+  bool has_a() const;
+  private:
+  bool _internal_has_a() const;
+  public:
+  void clear_a();
+  float a() const;
+  void set_a(float value);
+  private:
+  float _internal_a() const;
+  void _internal_set_a(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CKPacket.reqChangePlayerColor)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int32_t index_;
+    float r_;
+    float g_;
+    float b_;
+    float a_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_item_2eproto;
+};
+// -------------------------------------------------------------------
+
+class resChangePlayerColor final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:CKPacket.resChangePlayerColor) */ {
+ public:
+  inline resChangePlayerColor() : resChangePlayerColor(nullptr) {}
+  ~resChangePlayerColor() override;
+  explicit PROTOBUF_CONSTEXPR resChangePlayerColor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  resChangePlayerColor(const resChangePlayerColor& from);
+  resChangePlayerColor(resChangePlayerColor&& from) noexcept
+    : resChangePlayerColor() {
+    *this = ::std::move(from);
+  }
+
+  inline resChangePlayerColor& operator=(const resChangePlayerColor& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline resChangePlayerColor& operator=(resChangePlayerColor&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const resChangePlayerColor& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const resChangePlayerColor* internal_default_instance() {
+    return reinterpret_cast<const resChangePlayerColor*>(
+               &_resChangePlayerColor_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  friend void swap(resChangePlayerColor& a, resChangePlayerColor& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(resChangePlayerColor* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(resChangePlayerColor* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  resChangePlayerColor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<resChangePlayerColor>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const resChangePlayerColor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const resChangePlayerColor& from) {
+    resChangePlayerColor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(resChangePlayerColor* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CKPacket.resChangePlayerColor";
+  }
+  protected:
+  explicit resChangePlayerColor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIndexFieldNumber = 1,
+    kRFieldNumber = 2,
+    kGFieldNumber = 3,
+    kBFieldNumber = 4,
+    kAFieldNumber = 5,
+  };
+  // optional int32 index = 1;
+  bool has_index() const;
+  private:
+  bool _internal_has_index() const;
+  public:
+  void clear_index();
+  int32_t index() const;
+  void set_index(int32_t value);
+  private:
+  int32_t _internal_index() const;
+  void _internal_set_index(int32_t value);
+  public:
+
+  // optional float R = 2;
+  bool has_r() const;
+  private:
+  bool _internal_has_r() const;
+  public:
+  void clear_r();
+  float r() const;
+  void set_r(float value);
+  private:
+  float _internal_r() const;
+  void _internal_set_r(float value);
+  public:
+
+  // optional float G = 3;
+  bool has_g() const;
+  private:
+  bool _internal_has_g() const;
+  public:
+  void clear_g();
+  float g() const;
+  void set_g(float value);
+  private:
+  float _internal_g() const;
+  void _internal_set_g(float value);
+  public:
+
+  // optional float B = 4;
+  bool has_b() const;
+  private:
+  bool _internal_has_b() const;
+  public:
+  void clear_b();
+  float b() const;
+  void set_b(float value);
+  private:
+  float _internal_b() const;
+  void _internal_set_b(float value);
+  public:
+
+  // optional float A = 5;
+  bool has_a() const;
+  private:
+  bool _internal_has_a() const;
+  public:
+  void clear_a();
+  float a() const;
+  void set_a(float value);
+  private:
+  float _internal_a() const;
+  void _internal_set_a(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CKPacket.resChangePlayerColor)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int32_t index_;
+    float r_;
+    float g_;
+    float b_;
+    float a_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_item_2eproto;
+};
 // ===================================================================
 
 
@@ -1765,9 +2199,301 @@ inline void reqReplicatedPlayerDes::set_index(int32_t value) {
   // @@protoc_insertion_point(field_set:CKPacket.reqReplicatedPlayerDes.index)
 }
 
+// -------------------------------------------------------------------
+
+// reqChangePlayerColor
+
+// optional int32 index = 1;
+inline bool reqChangePlayerColor::_internal_has_index() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool reqChangePlayerColor::has_index() const {
+  return _internal_has_index();
+}
+inline void reqChangePlayerColor::clear_index() {
+  _impl_.index_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int32_t reqChangePlayerColor::_internal_index() const {
+  return _impl_.index_;
+}
+inline int32_t reqChangePlayerColor::index() const {
+  // @@protoc_insertion_point(field_get:CKPacket.reqChangePlayerColor.index)
+  return _internal_index();
+}
+inline void reqChangePlayerColor::_internal_set_index(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.index_ = value;
+}
+inline void reqChangePlayerColor::set_index(int32_t value) {
+  _internal_set_index(value);
+  // @@protoc_insertion_point(field_set:CKPacket.reqChangePlayerColor.index)
+}
+
+// optional float R = 2;
+inline bool reqChangePlayerColor::_internal_has_r() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool reqChangePlayerColor::has_r() const {
+  return _internal_has_r();
+}
+inline void reqChangePlayerColor::clear_r() {
+  _impl_.r_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline float reqChangePlayerColor::_internal_r() const {
+  return _impl_.r_;
+}
+inline float reqChangePlayerColor::r() const {
+  // @@protoc_insertion_point(field_get:CKPacket.reqChangePlayerColor.R)
+  return _internal_r();
+}
+inline void reqChangePlayerColor::_internal_set_r(float value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.r_ = value;
+}
+inline void reqChangePlayerColor::set_r(float value) {
+  _internal_set_r(value);
+  // @@protoc_insertion_point(field_set:CKPacket.reqChangePlayerColor.R)
+}
+
+// optional float G = 3;
+inline bool reqChangePlayerColor::_internal_has_g() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool reqChangePlayerColor::has_g() const {
+  return _internal_has_g();
+}
+inline void reqChangePlayerColor::clear_g() {
+  _impl_.g_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline float reqChangePlayerColor::_internal_g() const {
+  return _impl_.g_;
+}
+inline float reqChangePlayerColor::g() const {
+  // @@protoc_insertion_point(field_get:CKPacket.reqChangePlayerColor.G)
+  return _internal_g();
+}
+inline void reqChangePlayerColor::_internal_set_g(float value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.g_ = value;
+}
+inline void reqChangePlayerColor::set_g(float value) {
+  _internal_set_g(value);
+  // @@protoc_insertion_point(field_set:CKPacket.reqChangePlayerColor.G)
+}
+
+// optional float B = 4;
+inline bool reqChangePlayerColor::_internal_has_b() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool reqChangePlayerColor::has_b() const {
+  return _internal_has_b();
+}
+inline void reqChangePlayerColor::clear_b() {
+  _impl_.b_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline float reqChangePlayerColor::_internal_b() const {
+  return _impl_.b_;
+}
+inline float reqChangePlayerColor::b() const {
+  // @@protoc_insertion_point(field_get:CKPacket.reqChangePlayerColor.B)
+  return _internal_b();
+}
+inline void reqChangePlayerColor::_internal_set_b(float value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.b_ = value;
+}
+inline void reqChangePlayerColor::set_b(float value) {
+  _internal_set_b(value);
+  // @@protoc_insertion_point(field_set:CKPacket.reqChangePlayerColor.B)
+}
+
+// optional float A = 5;
+inline bool reqChangePlayerColor::_internal_has_a() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool reqChangePlayerColor::has_a() const {
+  return _internal_has_a();
+}
+inline void reqChangePlayerColor::clear_a() {
+  _impl_.a_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline float reqChangePlayerColor::_internal_a() const {
+  return _impl_.a_;
+}
+inline float reqChangePlayerColor::a() const {
+  // @@protoc_insertion_point(field_get:CKPacket.reqChangePlayerColor.A)
+  return _internal_a();
+}
+inline void reqChangePlayerColor::_internal_set_a(float value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.a_ = value;
+}
+inline void reqChangePlayerColor::set_a(float value) {
+  _internal_set_a(value);
+  // @@protoc_insertion_point(field_set:CKPacket.reqChangePlayerColor.A)
+}
+
+// -------------------------------------------------------------------
+
+// resChangePlayerColor
+
+// optional int32 index = 1;
+inline bool resChangePlayerColor::_internal_has_index() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool resChangePlayerColor::has_index() const {
+  return _internal_has_index();
+}
+inline void resChangePlayerColor::clear_index() {
+  _impl_.index_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int32_t resChangePlayerColor::_internal_index() const {
+  return _impl_.index_;
+}
+inline int32_t resChangePlayerColor::index() const {
+  // @@protoc_insertion_point(field_get:CKPacket.resChangePlayerColor.index)
+  return _internal_index();
+}
+inline void resChangePlayerColor::_internal_set_index(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.index_ = value;
+}
+inline void resChangePlayerColor::set_index(int32_t value) {
+  _internal_set_index(value);
+  // @@protoc_insertion_point(field_set:CKPacket.resChangePlayerColor.index)
+}
+
+// optional float R = 2;
+inline bool resChangePlayerColor::_internal_has_r() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool resChangePlayerColor::has_r() const {
+  return _internal_has_r();
+}
+inline void resChangePlayerColor::clear_r() {
+  _impl_.r_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline float resChangePlayerColor::_internal_r() const {
+  return _impl_.r_;
+}
+inline float resChangePlayerColor::r() const {
+  // @@protoc_insertion_point(field_get:CKPacket.resChangePlayerColor.R)
+  return _internal_r();
+}
+inline void resChangePlayerColor::_internal_set_r(float value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.r_ = value;
+}
+inline void resChangePlayerColor::set_r(float value) {
+  _internal_set_r(value);
+  // @@protoc_insertion_point(field_set:CKPacket.resChangePlayerColor.R)
+}
+
+// optional float G = 3;
+inline bool resChangePlayerColor::_internal_has_g() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool resChangePlayerColor::has_g() const {
+  return _internal_has_g();
+}
+inline void resChangePlayerColor::clear_g() {
+  _impl_.g_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline float resChangePlayerColor::_internal_g() const {
+  return _impl_.g_;
+}
+inline float resChangePlayerColor::g() const {
+  // @@protoc_insertion_point(field_get:CKPacket.resChangePlayerColor.G)
+  return _internal_g();
+}
+inline void resChangePlayerColor::_internal_set_g(float value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.g_ = value;
+}
+inline void resChangePlayerColor::set_g(float value) {
+  _internal_set_g(value);
+  // @@protoc_insertion_point(field_set:CKPacket.resChangePlayerColor.G)
+}
+
+// optional float B = 4;
+inline bool resChangePlayerColor::_internal_has_b() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool resChangePlayerColor::has_b() const {
+  return _internal_has_b();
+}
+inline void resChangePlayerColor::clear_b() {
+  _impl_.b_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline float resChangePlayerColor::_internal_b() const {
+  return _impl_.b_;
+}
+inline float resChangePlayerColor::b() const {
+  // @@protoc_insertion_point(field_get:CKPacket.resChangePlayerColor.B)
+  return _internal_b();
+}
+inline void resChangePlayerColor::_internal_set_b(float value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.b_ = value;
+}
+inline void resChangePlayerColor::set_b(float value) {
+  _internal_set_b(value);
+  // @@protoc_insertion_point(field_set:CKPacket.resChangePlayerColor.B)
+}
+
+// optional float A = 5;
+inline bool resChangePlayerColor::_internal_has_a() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool resChangePlayerColor::has_a() const {
+  return _internal_has_a();
+}
+inline void resChangePlayerColor::clear_a() {
+  _impl_.a_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline float resChangePlayerColor::_internal_a() const {
+  return _impl_.a_;
+}
+inline float resChangePlayerColor::a() const {
+  // @@protoc_insertion_point(field_get:CKPacket.resChangePlayerColor.A)
+  return _internal_a();
+}
+inline void resChangePlayerColor::_internal_set_a(float value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.a_ = value;
+}
+inline void resChangePlayerColor::set_a(float value) {
+  _internal_set_a(value);
+  // @@protoc_insertion_point(field_set:CKPacket.resChangePlayerColor.A)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

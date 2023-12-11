@@ -27,7 +27,6 @@ void PacketManager::Init(const CKServer::int32 maxClient_)
 void PacketManager::BroadcastPacket(CKServer::int32 sender, CKServer::int32 size, char* buf, bool includingSender)
 {
 	std::vector<User*> users;
-	users.reserve(mUserManager->GetCurrentUserCnt());
 	mUserManager->GetAllUser(users);
 
 	for (auto i : users)

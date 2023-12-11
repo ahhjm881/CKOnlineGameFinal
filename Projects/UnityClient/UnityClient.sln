@@ -1,27 +1,30 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network", "Network.csproj", "{35beaa9e-fecb-c705-8220-794adff39408}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{6C9E1067-45D3-8D51-00C4-572C36C1182E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{67109e6c-d345-518d-00c4-572c36c1182e}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network", "Network.csproj", "{9EAABE35-CBFE-05C7-8220-794ADFF39408}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replication", "Replication.csproj", "{1ed4e03d-fddd-eedb-da49-dabc848c3e1c}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{547289fd-a684-775d-5c6d-7a8f123ecc46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replication", "Replication.csproj", "{3DE0D41E-DDFD-DBEE-DA49-DABC848C3E1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{35beaa9e-fecb-c705-8220-794adff39408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35beaa9e-fecb-c705-8220-794adff39408}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67109e6c-d345-518d-00c4-572c36c1182e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67109e6c-d345-518d-00c4-572c36c1182e}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1ed4e03d-fddd-eedb-da49-dabc848c3e1c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1ed4e03d-fddd-eedb-da49-dabc848c3e1c}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{547289fd-a684-775d-5c6d-7a8f123ecc46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{547289fd-a684-775d-5c6d-7a8f123ecc46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9E1067-45D3-8D51-00C4-572C36C1182E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9E1067-45D3-8D51-00C4-572C36C1182E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9E1067-45D3-8D51-00C4-572C36C1182E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9E1067-45D3-8D51-00C4-572C36C1182E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EAABE35-CBFE-05C7-8220-794ADFF39408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EAABE35-CBFE-05C7-8220-794ADFF39408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EAABE35-CBFE-05C7-8220-794ADFF39408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EAABE35-CBFE-05C7-8220-794ADFF39408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE0D41E-DDFD-DBEE-DA49-DABC848C3E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE0D41E-DDFD-DBEE-DA49-DABC848C3E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE0D41E-DDFD-DBEE-DA49-DABC848C3E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE0D41E-DDFD-DBEE-DA49-DABC848C3E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -35,3 +35,19 @@ message reqReplicatedPlayerGen {
 message reqReplicatedPlayerDes {
 	optional int32 index = 1;
 }
+
+message reqChangePlayerColor{
+	optional int32 index = 1;
+	optional float R = 2;
+	optional float G = 3;
+	optional float B = 4;
+	optional float A = 5;
+}
+
+message resChangePlayerColor{
+	optional int32 index = 1;
+	optional float R = 2;
+	optional float G = 3;
+	optional float B = 4;
+	optional float A = 5;
+}

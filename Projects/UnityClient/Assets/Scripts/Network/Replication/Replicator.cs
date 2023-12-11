@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using System.Runtime.CompilerServices;
 using CKPacket;
 using Google.Protobuf;
 using JetBrains.Annotations;
@@ -42,15 +43,18 @@ public abstract class Replicator : MonoBehaviour
     private void RecvSynchronize(PackedHeader header)
     {
         var obj = GetReplicatedObjectFromRecvHeader(header);
+
+        if (obj == null) return;
         Factory.Internal_RecvSynchronize(obj, header);
     }
-    private void AddReplicatedObject(IReplication obj)
+    public void AddReplicatedObject(IReplication obj)
     {
         _list.Add(obj);
+        obj.Replicator = this;
         obj.OnInit();
     }
 
-    private bool RemoveReplicatedObject(IReplication obj)
+    public bool RemoveReplicatedObject(IReplication obj)
     {
         obj.OnExpired();
         return _list.Remove(obj);
@@ -58,6 +62,7 @@ public abstract class Replicator : MonoBehaviour
 
     private void CreateReplicatedObject(CKPacket.PackedHeader header)
     {
+        Debug.Log("gen c");
         var obj = Factory.Internal_Generate(header);
         if (obj == null) return;
         AddReplicatedObject(obj);
@@ -97,14 +102,14 @@ public abstract class Replicator : MonoBehaviour
     {
         if (index == -1) 
         {
-            Debug.LogError("Replicator: 유효하지 않는 index: " + index);
+            //Debug.LogError("Replicator: 유효하지 않는 index: " + index);
             return null;
         }
 
         var obj = _list.Find(x=>x.Index == index);
         if (obj == null)
         {
-            Debug.LogError("Replicator: 유효하지 않는 index: " + index);
+            //Debug.LogError("Replicator: 유효하지 않는 index: " + index);
             return null;
         }
 

@@ -24,7 +24,6 @@
   <ItemGroup>
     <ClInclude Include="PacketDefine.h" />
     <ClInclude Include="PacketUtil.h" />
-    <ClInclude Include="test.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

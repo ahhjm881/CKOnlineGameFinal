@@ -141,8 +141,44 @@ struct reqReplicatedPlayerDesDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 reqReplicatedPlayerDesDefaultTypeInternal _reqReplicatedPlayerDes_default_instance_;
+PROTOBUF_CONSTEXPR reqChangePlayerColor::reqChangePlayerColor(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.index_)*/0
+  , /*decltype(_impl_.r_)*/0
+  , /*decltype(_impl_.g_)*/0
+  , /*decltype(_impl_.b_)*/0
+  , /*decltype(_impl_.a_)*/0} {}
+struct reqChangePlayerColorDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR reqChangePlayerColorDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~reqChangePlayerColorDefaultTypeInternal() {}
+  union {
+    reqChangePlayerColor _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 reqChangePlayerColorDefaultTypeInternal _reqChangePlayerColor_default_instance_;
+PROTOBUF_CONSTEXPR resChangePlayerColor::resChangePlayerColor(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.index_)*/0
+  , /*decltype(_impl_.r_)*/0
+  , /*decltype(_impl_.g_)*/0
+  , /*decltype(_impl_.b_)*/0
+  , /*decltype(_impl_.a_)*/0} {}
+struct resChangePlayerColorDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR resChangePlayerColorDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~resChangePlayerColorDefaultTypeInternal() {}
+  union {
+    resChangePlayerColor _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 resChangePlayerColorDefaultTypeInternal _resChangePlayerColor_default_instance_;
 }  // namespace CKPacket
-static ::_pb::Metadata file_level_metadata_item_2eproto[9];
+static ::_pb::Metadata file_level_metadata_item_2eproto[11];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_item_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_item_2eproto = nullptr;
 
@@ -223,6 +259,38 @@ const uint32_t TableStruct_item_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(pro
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::CKPacket::reqReplicatedPlayerDes, _impl_.index_),
   0,
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqChangePlayerColor, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqChangePlayerColor, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqChangePlayerColor, _impl_.index_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqChangePlayerColor, _impl_.r_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqChangePlayerColor, _impl_.g_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqChangePlayerColor, _impl_.b_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqChangePlayerColor, _impl_.a_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resChangePlayerColor, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resChangePlayerColor, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resChangePlayerColor, _impl_.index_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resChangePlayerColor, _impl_.r_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resChangePlayerColor, _impl_.g_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resChangePlayerColor, _impl_.b_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resChangePlayerColor, _impl_.a_),
+  0,
+  1,
+  2,
+  3,
+  4,
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::CKPacket::resPlayerJoin)},
@@ -234,6 +302,8 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 54, 61, -1, sizeof(::CKPacket::resReplicatedPlayerDes)},
   { 62, -1, -1, sizeof(::CKPacket::reqReplicatedPlayerGen)},
   { 68, 75, -1, sizeof(::CKPacket::reqReplicatedPlayerDes)},
+  { 76, 87, -1, sizeof(::CKPacket::reqChangePlayerColor)},
+  { 92, 103, -1, sizeof(::CKPacket::resChangePlayerColor)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -246,6 +316,8 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::CKPacket::_resReplicatedPlayerDes_default_instance_._instance,
   &::CKPacket::_reqReplicatedPlayerGen_default_instance_._instance,
   &::CKPacket::_reqReplicatedPlayerDes_default_instance_._instance,
+  &::CKPacket::_reqChangePlayerColor_default_instance_._instance,
+  &::CKPacket::_resChangePlayerColor_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_item_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -261,13 +333,20 @@ const char descriptor_table_protodef_item_2eproto[] PROTOBUF_SECTION_VARIABLE(pr
   "plicatedPlayerDes\022\022\n\005index\030\001 \001(\005H\000\210\001\001B\010\n"
   "\006_index\"\030\n\026reqReplicatedPlayerGen\"6\n\026req"
   "ReplicatedPlayerDes\022\022\n\005index\030\001 \001(\005H\000\210\001\001B"
-  "\010\n\006_indexb\006proto3"
+  "\010\n\006_index\"\214\001\n\024reqChangePlayerColor\022\022\n\005in"
+  "dex\030\001 \001(\005H\000\210\001\001\022\016\n\001R\030\002 \001(\002H\001\210\001\001\022\016\n\001G\030\003 \001("
+  "\002H\002\210\001\001\022\016\n\001B\030\004 \001(\002H\003\210\001\001\022\016\n\001A\030\005 \001(\002H\004\210\001\001B\010"
+  "\n\006_indexB\004\n\002_RB\004\n\002_GB\004\n\002_BB\004\n\002_A\"\214\001\n\024res"
+  "ChangePlayerColor\022\022\n\005index\030\001 \001(\005H\000\210\001\001\022\016\n"
+  "\001R\030\002 \001(\002H\001\210\001\001\022\016\n\001G\030\003 \001(\002H\002\210\001\001\022\016\n\001B\030\004 \001(\002"
+  "H\003\210\001\001\022\016\n\001A\030\005 \001(\002H\004\210\001\001B\010\n\006_indexB\004\n\002_RB\004\n"
+  "\002_GB\004\n\002_BB\004\n\002_Ab\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_item_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_item_2eproto = {
-    false, false, 497, descriptor_table_protodef_item_2eproto,
+    false, false, 783, descriptor_table_protodef_item_2eproto,
     "item.proto",
-    &descriptor_table_item_2eproto_once, nullptr, 0, 9,
+    &descriptor_table_item_2eproto_once, nullptr, 0, 11,
     schemas, file_default_instances, TableStruct_item_2eproto::offsets,
     file_level_metadata_item_2eproto, file_level_enum_descriptors_item_2eproto,
     file_level_service_descriptors_item_2eproto,
@@ -1594,6 +1673,646 @@ void reqReplicatedPlayerDes::InternalSwap(reqReplicatedPlayerDes* other) {
       file_level_metadata_item_2eproto[8]);
 }
 
+// ===================================================================
+
+class reqChangePlayerColor::_Internal {
+ public:
+  using HasBits = decltype(std::declval<reqChangePlayerColor>()._impl_._has_bits_);
+  static void set_has_index(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_r(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_g(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_b(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+};
+
+reqChangePlayerColor::reqChangePlayerColor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.reqChangePlayerColor)
+}
+reqChangePlayerColor::reqChangePlayerColor(const reqChangePlayerColor& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  reqChangePlayerColor* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.index_){}
+    , decltype(_impl_.r_){}
+    , decltype(_impl_.g_){}
+    , decltype(_impl_.b_){}
+    , decltype(_impl_.a_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.index_, &from._impl_.index_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_) -
+    reinterpret_cast<char*>(&_impl_.index_)) + sizeof(_impl_.a_));
+  // @@protoc_insertion_point(copy_constructor:CKPacket.reqChangePlayerColor)
+}
+
+inline void reqChangePlayerColor::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.index_){0}
+    , decltype(_impl_.r_){0}
+    , decltype(_impl_.g_){0}
+    , decltype(_impl_.b_){0}
+    , decltype(_impl_.a_){0}
+  };
+}
+
+reqChangePlayerColor::~reqChangePlayerColor() {
+  // @@protoc_insertion_point(destructor:CKPacket.reqChangePlayerColor)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void reqChangePlayerColor::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void reqChangePlayerColor::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void reqChangePlayerColor::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.reqChangePlayerColor)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    ::memset(&_impl_.index_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_) -
+        reinterpret_cast<char*>(&_impl_.index_)) + sizeof(_impl_.a_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* reqChangePlayerColor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int32 index = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_index(&has_bits);
+          _impl_.index_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float R = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _Internal::set_has_r(&has_bits);
+          _impl_.r_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float G = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
+          _Internal::set_has_g(&has_bits);
+          _impl_.g_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float B = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
+          _Internal::set_has_b(&has_bits);
+          _impl_.b_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float A = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
+          _Internal::set_has_a(&has_bits);
+          _impl_.a_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* reqChangePlayerColor::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.reqChangePlayerColor)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // optional int32 index = 1;
+  if (_internal_has_index()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_index(), target);
+  }
+
+  // optional float R = 2;
+  if (_internal_has_r()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_r(), target);
+  }
+
+  // optional float G = 3;
+  if (_internal_has_g()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_g(), target);
+  }
+
+  // optional float B = 4;
+  if (_internal_has_b()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_b(), target);
+  }
+
+  // optional float A = 5;
+  if (_internal_has_a()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_a(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.reqChangePlayerColor)
+  return target;
+}
+
+size_t reqChangePlayerColor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.reqChangePlayerColor)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    // optional int32 index = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_index());
+    }
+
+    // optional float R = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float G = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float B = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float A = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 4;
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData reqChangePlayerColor::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    reqChangePlayerColor::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*reqChangePlayerColor::GetClassData() const { return &_class_data_; }
+
+
+void reqChangePlayerColor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<reqChangePlayerColor*>(&to_msg);
+  auto& from = static_cast<const reqChangePlayerColor&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.reqChangePlayerColor)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.index_ = from._impl_.index_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.r_ = from._impl_.r_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.g_ = from._impl_.g_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.b_ = from._impl_.b_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_ = from._impl_.a_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void reqChangePlayerColor::CopyFrom(const reqChangePlayerColor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.reqChangePlayerColor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool reqChangePlayerColor::IsInitialized() const {
+  return true;
+}
+
+void reqChangePlayerColor::InternalSwap(reqChangePlayerColor* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(reqChangePlayerColor, _impl_.a_)
+      + sizeof(reqChangePlayerColor::_impl_.a_)
+      - PROTOBUF_FIELD_OFFSET(reqChangePlayerColor, _impl_.index_)>(
+          reinterpret_cast<char*>(&_impl_.index_),
+          reinterpret_cast<char*>(&other->_impl_.index_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata reqChangePlayerColor::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[9]);
+}
+
+// ===================================================================
+
+class resChangePlayerColor::_Internal {
+ public:
+  using HasBits = decltype(std::declval<resChangePlayerColor>()._impl_._has_bits_);
+  static void set_has_index(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_r(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_g(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_b(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+};
+
+resChangePlayerColor::resChangePlayerColor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.resChangePlayerColor)
+}
+resChangePlayerColor::resChangePlayerColor(const resChangePlayerColor& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  resChangePlayerColor* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.index_){}
+    , decltype(_impl_.r_){}
+    , decltype(_impl_.g_){}
+    , decltype(_impl_.b_){}
+    , decltype(_impl_.a_){}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.index_, &from._impl_.index_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_) -
+    reinterpret_cast<char*>(&_impl_.index_)) + sizeof(_impl_.a_));
+  // @@protoc_insertion_point(copy_constructor:CKPacket.resChangePlayerColor)
+}
+
+inline void resChangePlayerColor::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.index_){0}
+    , decltype(_impl_.r_){0}
+    , decltype(_impl_.g_){0}
+    , decltype(_impl_.b_){0}
+    , decltype(_impl_.a_){0}
+  };
+}
+
+resChangePlayerColor::~resChangePlayerColor() {
+  // @@protoc_insertion_point(destructor:CKPacket.resChangePlayerColor)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void resChangePlayerColor::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void resChangePlayerColor::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void resChangePlayerColor::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.resChangePlayerColor)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    ::memset(&_impl_.index_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_) -
+        reinterpret_cast<char*>(&_impl_.index_)) + sizeof(_impl_.a_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* resChangePlayerColor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional int32 index = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_index(&has_bits);
+          _impl_.index_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float R = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _Internal::set_has_r(&has_bits);
+          _impl_.r_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float G = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
+          _Internal::set_has_g(&has_bits);
+          _impl_.g_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float B = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
+          _Internal::set_has_b(&has_bits);
+          _impl_.b_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional float A = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
+          _Internal::set_has_a(&has_bits);
+          _impl_.a_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _impl_._has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* resChangePlayerColor::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.resChangePlayerColor)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // optional int32 index = 1;
+  if (_internal_has_index()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_index(), target);
+  }
+
+  // optional float R = 2;
+  if (_internal_has_r()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_r(), target);
+  }
+
+  // optional float G = 3;
+  if (_internal_has_g()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_g(), target);
+  }
+
+  // optional float B = 4;
+  if (_internal_has_b()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_b(), target);
+  }
+
+  // optional float A = 5;
+  if (_internal_has_a()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_a(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.resChangePlayerColor)
+  return target;
+}
+
+size_t resChangePlayerColor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.resChangePlayerColor)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    // optional int32 index = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_index());
+    }
+
+    // optional float R = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float G = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float B = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float A = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 4;
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData resChangePlayerColor::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    resChangePlayerColor::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*resChangePlayerColor::GetClassData() const { return &_class_data_; }
+
+
+void resChangePlayerColor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<resChangePlayerColor*>(&to_msg);
+  auto& from = static_cast<const resChangePlayerColor&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.resChangePlayerColor)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.index_ = from._impl_.index_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.r_ = from._impl_.r_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.g_ = from._impl_.g_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.b_ = from._impl_.b_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_ = from._impl_.a_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void resChangePlayerColor::CopyFrom(const resChangePlayerColor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.resChangePlayerColor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool resChangePlayerColor::IsInitialized() const {
+  return true;
+}
+
+void resChangePlayerColor::InternalSwap(resChangePlayerColor* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(resChangePlayerColor, _impl_.a_)
+      + sizeof(resChangePlayerColor::_impl_.a_)
+      - PROTOBUF_FIELD_OFFSET(resChangePlayerColor, _impl_.index_)>(
+          reinterpret_cast<char*>(&_impl_.index_),
+          reinterpret_cast<char*>(&other->_impl_.index_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata resChangePlayerColor::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[10]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace CKPacket
 PROTOBUF_NAMESPACE_OPEN
@@ -1632,6 +2351,14 @@ Arena::CreateMaybeMessage< ::CKPacket::reqReplicatedPlayerGen >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::CKPacket::reqReplicatedPlayerDes*
 Arena::CreateMaybeMessage< ::CKPacket::reqReplicatedPlayerDes >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CKPacket::reqReplicatedPlayerDes >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::reqChangePlayerColor*
+Arena::CreateMaybeMessage< ::CKPacket::reqChangePlayerColor >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::reqChangePlayerColor >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::resChangePlayerColor*
+Arena::CreateMaybeMessage< ::CKPacket::resChangePlayerColor >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::resChangePlayerColor >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

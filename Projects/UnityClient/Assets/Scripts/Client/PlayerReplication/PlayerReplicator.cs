@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using CKPacket;
 using Google.Protobuf;
 using UnityEngine;
@@ -8,13 +9,15 @@ using UnityEngine.UIElements;
 
 public class PlayerReplicator : Replicator
 {
+    [SerializeField] private ReplicatedPlayer _localPlayer;
     [SerializeField] private ReplicatedPlayerFactory _factory;
 
     // 수신시 동기화용으로 사용될 패킷을 등록
     protected override IMessage[] GetSynchronizePackets()
         => new IMessage[]
         {
-            new resPlayerPosition()
+            new resPlayerPosition(),
+            new resChangePlayerColor()
         };
 
     public override ReplicatedObjectFactory Factory => _factory;
@@ -28,6 +31,7 @@ public class PlayerReplicator : Replicator
     // 여기에 등록된 패킷을 수신하면, Factory 클래스의 Destroy() 함수 호출
     protected override IMessage GetExpireTarget()
         => new resReplicatedPlayerDes();
+
 
     private void Awake()
     {
@@ -69,7 +73,16 @@ public class ReplicatedPlayerFactory : ReplicatedObjectFactory
     /// <returns>해당 패킷에 해당하는 replicated 객체의 인덱스를 반환해야함.</returns>
     public override int GetReplicatedObjectIndexFromRecvHeader(PackedHeader recvPacket)
     {
-        return recvPacket.CreateMessage<resPlayerPosition>().Index;
+        if (recvPacket.MessagType == resChangePlayerColor.Descriptor.FullName)
+        {
+            return recvPacket.CreateMessage<resChangePlayerColor>().Index;
+        }
+        if (recvPacket.MessagType == resPlayerPosition.Descriptor.FullName)
+        {
+            return recvPacket.CreateMessage<resPlayerPosition>().Index;
+        }
+
+        return -1;
     }
     /// <summary>
     /// 동기화 패킷을 Recv 했을 때 호출되는 함수.
@@ -99,8 +112,18 @@ public class ReplicatedPlayerFactory : ReplicatedObjectFactory
             Z = position.z
         };
         
-        
         Client.TCP.SendPacket(packet);
+
+        var packet2 = new reqChangePlayerColor()
+        {
+            Index = obj.Index,
+            R = obj.R,
+            G = obj.G,
+            B = obj.B,
+            A = obj.A
+        };
+        
+        Client.TCP.SendPacket(packet2);
     }
 
     /// <summary>
@@ -111,9 +134,19 @@ public class ReplicatedPlayerFactory : ReplicatedObjectFactory
     protected override void RecvSynchronize(IReplication obj, PackedHeader recvPacket)
     {
         if (obj is not ReplicatedPlayer p) return;
-        var pos = recvPacket.CreateMessage<resPlayerPosition>();
-
-        p.transform.position = new Vector3(pos.X, pos.Y, pos.Z);
+        
+        if (recvPacket.MessagType == resChangePlayerColor.Descriptor.FullName)
+        {
+            var color = recvPacket.CreateMessage<resChangePlayerColor>();
+            Color mColor = new Color(color.R, color.G, color.B, color.A);
+            p.GetComponent<MeshRenderer>().material.color = mColor;
+        }
+        
+        if (recvPacket.MessagType == resPlayerPosition.Descriptor.FullName)
+        {
+            var pos = recvPacket.CreateMessage<resPlayerPosition>();
+            p.transform.position = new Vector3(pos.X, pos.Y, pos.Z);
+        }
     }
 
     /// <summary>
@@ -129,6 +162,8 @@ public class ReplicatedPlayerFactory : ReplicatedObjectFactory
         player.Index = packet.Index;
 
         player.name = $"replicated_player_{player.Index}";
+        
+        Debug.Log("Gen: " + player.Index);
         
         return player;
     }
