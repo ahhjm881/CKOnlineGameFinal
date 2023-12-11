@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <BaseOutputPath>bin</BaseOutputPath>
+    <PackageOutputPath></PackageOutputPath>
+    <PackAsTool>False</PackAsTool>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.25.1" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(OutputPath)*.dll ..\..\Projects\UnityClient\Assets\Plugins\Packet&#xD;&#xA;copy $(OutputPath)*.pdb ..\..\Projects\UnityClient\Assets\Plugins\Packet" />
+  </Target>
+
+</Project>
