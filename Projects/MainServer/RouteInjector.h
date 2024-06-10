@@ -5,6 +5,7 @@
 #include "RConnection.h"
 #include "RPing.h"
 #include "RReplicationPlayer.h"
+#include "RItemGiver.h"
 
 #include <vector>
 
@@ -23,6 +24,7 @@ public:
 		AddRoute<RConnection>();
 		AddRoute<RPing>();
 		AddRoute<RReplicationPlayer>();
+		AddRoute<RItemGiver>();
 
 		for (auto i : mRoutes)
 		{

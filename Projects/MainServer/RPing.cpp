@@ -26,5 +26,5 @@ void RPing::Ping(IManagerProvider* provider, CKPacket::messageHeader* packet)
 			printf("ping %d, user: %d\n", m_count, packet->userid());
 		m_count++;
 	}
-
 }
+ 

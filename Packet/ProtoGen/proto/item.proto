@@ -35,3 +35,34 @@ message reqReplicatedPlayerGen {
 message reqReplicatedPlayerDes {
 	optional int32 index = 1;
 }
+
+message reqAddToItem{
+	itemInfo item = 1;
+}
+
+message resAddToItem{
+	itemInfo item = 1;
+}
+
+
+message reqRemoveFromItem{
+	itemInfo item = 1;
+}
+
+message resRemoveFromToItem{
+	itemInfo item = 1;
+}
+
+message reqInventoryItems{
+	string name = 1;
+}
+
+message resInventoryItems{
+	repeated itemInfo items = 1;
+}
+
+ message itemInfo{
+	 string name = 1;
+	 string itemName = 2;
+	 uint32 count = 3;
+ }

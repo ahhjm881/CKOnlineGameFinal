@@ -60,6 +60,8 @@ void PacketManager::CreateCompent(const CKServer::int32 maxClient_)
 
 
 	mRedisMgr = new RedisManager;
+	//mRedisMgr->Run      
+	
 }
 
 bool PacketManager::Run()

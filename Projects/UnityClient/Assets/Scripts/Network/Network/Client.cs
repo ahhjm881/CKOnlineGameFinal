@@ -6,10 +6,17 @@ public static class Client
 {
     private const string IP = "127.0.0.1";
     //public static NetworkClient TCP = new NetworkClient(IP, 5004, ProtocolType.Tcp);
-    public static NetworkClient TCP = new NetworkClient(IP, 11022, ProtocolType.Tcp);
-    public static NetworkClient UDP = new NetworkClient(IP, 5025, ProtocolType.Udp);
+    public static NetworkClient TCP ;
+    public static NetworkClient UDP ;
 
     public static uint Index { get; private set; }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
+    private static void Init()
+    {
+        TCP = new NetworkClient(IP, 11022, ProtocolType.Tcp);
+        UDP = new NetworkClient(IP, 5025, ProtocolType.Udp);
+    }
 
     public static void Start()
     {

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\test.cs" />
+     <Compile Include="Assets\Scripts\Client\ItemGiver.cs" />
      <Compile Include="Assets\Scripts\Client\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkInitializer.cs" />
      <Compile Include="Assets\Scripts\Client\PlayerReplication\ReplicatedPlayer.cs" />

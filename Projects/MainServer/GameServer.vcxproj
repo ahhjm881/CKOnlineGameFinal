@@ -68,7 +68,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>../thirdparty/redis/hiredis/VS-IDE/Debug;..\..\CppCommon\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>PacketManager.lib;libprotocd.lib;libprotobufd.lib;libprotobuf-lited.lib;spdlog.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>PacketManager.lib;libprotocd.lib;libprotobufd.lib;libprotobuf-lited.lib;spdlog.lib;mysqlcppconn8.lib;mysqlcppconn8-static.lib;mysqlcppconn.lib;mysqlcppconn-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -104,6 +104,7 @@
     <ClInclude Include="Packet\system.pb.h" />
     <ClInclude Include="RedisManager.h" />
     <ClInclude Include="RedisTaskDefine.h" />
+    <ClInclude Include="RItemGiver.h" />
     <ClInclude Include="Route.h" />
     <ClInclude Include="RPing.h" />
     <ClInclude Include="RReplicationPlayer.h" />
@@ -124,6 +125,7 @@
     <ClCompile Include="Packet\item.pb.cc" />
     <ClCompile Include="Packet\messageHeader.pb.cc" />
     <ClCompile Include="Packet\system.pb.cc" />
+    <ClCompile Include="RItemGiver.cpp" />
     <ClCompile Include="RouteInjector.h" />
     <ClCompile Include="RPing.cpp" />
     <ClCompile Include="RReplicationPlayer.cpp" />
