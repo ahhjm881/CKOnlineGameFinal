@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{547289fd-a684-775d-5c6d-7a8f123ecc46}</ProjectGuid>
+    <ProjectGuid>{08bd4918-aebd-c306-1b2f-271d3b055b90}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <AssemblyName>UnityEditor.UI.EditorTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -41,10 +41,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <None Include="Assets\Plugins\Packet\CsharpPacket.deps.json" />
-     <None Include="Assets\Plugins\Packet\System.Runtime.CompilerServices.Unsafe.xml" />
-     <Folder Include="Assets\Plugins\Packet" />
-     <Folder Include="Assets\Plugins" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\RectMask2D" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\InputField" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\UI\PropertyDrawers" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\UI" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\EventSystem" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\Canvas" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\UnityEvent" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\Slider" />
+     <None Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\UnityEditor.UI.EditorTests.asmdef" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\CanvasRenderer" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\Dropdown" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\Text" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity 2022.3.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
