@@ -678,3 +678,5 @@ crashlytics-build.properties
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,unity,c++,csharp
+CppCommon/lib/mysqlcppconn-static.lib
+CppCommon/lib/mysqlcppconn8-static.lib
