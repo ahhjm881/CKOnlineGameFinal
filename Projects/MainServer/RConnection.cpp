@@ -2,6 +2,7 @@
 #include "PacketManager.h"
 #include "UserManager.h"
 #include "type.h"
+#include "ckutil/PacketUtil.h"
 
 void RConnection::RegisterPacket(PacketManager* packetManager)
 {

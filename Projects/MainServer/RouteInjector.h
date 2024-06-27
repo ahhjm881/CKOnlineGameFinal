@@ -5,7 +5,8 @@
 #include "RConnection.h"
 #include "RPing.h"
 #include "RReplicationPlayer.h"
-#include "RItemGiver.h"
+#include "RIenventory.h"
+#include "RShop.h"
 
 #include <vector>
 
@@ -24,7 +25,8 @@ public:
 		AddRoute<RConnection>();
 		AddRoute<RPing>();
 		AddRoute<RReplicationPlayer>();
-		AddRoute<RItemGiver>();
+		AddRoute<RIenventory>();
+		AddRoute<RShop>();
 
 		for (auto i : mRoutes)
 		{

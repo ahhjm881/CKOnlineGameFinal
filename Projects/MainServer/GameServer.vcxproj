@@ -94,6 +94,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Packet\PacketUtil.h" />
     <ClInclude Include="RConnection.h" />
     <ClInclude Include="CRedisConnEx.h" />
     <ClInclude Include="ErrorCode.h" />
@@ -104,13 +105,14 @@
     <ClInclude Include="Packet\system.pb.h" />
     <ClInclude Include="RedisManager.h" />
     <ClInclude Include="RedisTaskDefine.h" />
-    <ClInclude Include="RItemGiver.h" />
+    <ClInclude Include="RIenventory.h" />
     <ClInclude Include="Route.h" />
     <ClInclude Include="RPing.h" />
     <ClInclude Include="RReplicationPlayer.h" />
     <ClInclude Include="ServerNetwork\ClientInfo.h" />
     <ClInclude Include="ServerNetwork\Define.h" />
     <ClInclude Include="ServerNetwork\IOCPServer.h" />
+    <ClInclude Include="RShop.h" />
     <ClInclude Include="type.h" />
     <ClInclude Include="unity.h" />
     <ClInclude Include="User.h" />
@@ -125,10 +127,11 @@
     <ClCompile Include="Packet\item.pb.cc" />
     <ClCompile Include="Packet\messageHeader.pb.cc" />
     <ClCompile Include="Packet\system.pb.cc" />
-    <ClCompile Include="RItemGiver.cpp" />
+    <ClCompile Include="RIenventory.cpp" />
     <ClCompile Include="RouteInjector.h" />
     <ClCompile Include="RPing.cpp" />
     <ClCompile Include="RReplicationPlayer.cpp" />
+    <ClCompile Include="RShop.cpp" />
     <ClCompile Include="unity.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

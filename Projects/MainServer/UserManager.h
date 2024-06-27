@@ -53,6 +53,22 @@ public:
 		return mUserObjPool[clientIndex_];
 	}
 
+
+	User* GetUserByName(std::string name)
+	{
+		std::lock_guard<std::mutex> lock(mLock);
+
+		for (int i = 0; i < mMaxUserCnt; i++)
+		{
+			if (mUserObjPool[i]->GetName() == name)
+			{
+				return mUserObjPool[i];
+			}
+		}
+
+		return nullptr;
+	}
+
 	void GetAllUser(std::vector<User*>& v)
 	{
 		std::lock_guard<std::mutex> lock(mLock);

@@ -9,6 +9,8 @@ public static class Client
     public static NetworkClient TCP ;
     public static NetworkClient UDP ;
 
+    public static string Name { get; private set; }
+
     public static uint Index { get; private set; }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
@@ -33,6 +35,23 @@ public static class Client
         var join = header.CreateMessage<resPlayerJoin>();
         Index = header.MessageHeader.UserId;
         Debug.Log("server joined, index: " + Index);
+        
+        //UnityEngine.Random.InitState((int)Index);
+        //string n = "";
+        //for (int i = 0; i < 10; i++)
+        //{
+        //    n += (char)(Random.Range(0, 26) + 65);
+        //}
+//
+        //Name = n;
+        Name = "Test";
+        
+        Debug.Log(Name);
+        
+        TCP.SendPacket(new reqNotifyPlayerName()
+        {
+            Name = Name
+        });
     }
 
     private static bool OnApplicationQuit()

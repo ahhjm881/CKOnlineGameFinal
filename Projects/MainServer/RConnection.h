@@ -10,5 +10,6 @@ public:
 private:
     void Connect(IManagerProvider* provider, CKPacket::messageHeader* header);
     void Disconnect(IManagerProvider* provider, CKPacket::messageHeader* header);
+    void NotifyName(IManagerProvider* provider, CKPacket::messageHeader* header);
 };
 

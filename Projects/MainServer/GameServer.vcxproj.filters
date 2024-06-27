@@ -35,8 +35,11 @@
     <ClCompile Include="RReplicationPlayer.cpp">
       <Filter>Route\Replicated\Player</Filter>
     </ClCompile>
-    <ClCompile Include="RItemGiver.cpp">
+    <ClCompile Include="RIenventory.cpp">
       <Filter>Route\ItemGiver</Filter>
+    </ClCompile>
+    <ClCompile Include="RShop.cpp">
+      <Filter>Route\Shop</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,9 +103,13 @@
     <ClInclude Include="RReplicationPlayer.h">
       <Filter>Route\Replicated\Player</Filter>
     </ClInclude>
-    <ClInclude Include="RItemGiver.h">
+    <ClInclude Include="RIenventory.h">
       <Filter>Route\ItemGiver</Filter>
     </ClInclude>
+    <ClInclude Include="RShop.h">
+      <Filter>Route\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\PacketUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ServerNetwork">
@@ -143,6 +150,9 @@
     </Filter>
     <Filter Include="Route\ItemGiver">
       <UniqueIdentifier>{c18f8a2a-bf6e-4caa-a0dc-0c751c0ec0d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Route\Shop">
+      <UniqueIdentifier>{b1580e04-2744-4ac7-aa61-a221fb3dac6b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

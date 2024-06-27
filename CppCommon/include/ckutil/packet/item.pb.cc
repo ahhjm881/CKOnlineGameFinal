@@ -54,6 +54,19 @@ struct resPingDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 resPingDefaultTypeInternal _resPing_default_instance_;
+PROTOBUF_CONSTEXPR reqNotifyPlayerName::reqNotifyPlayerName(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct reqNotifyPlayerNameDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR reqNotifyPlayerNameDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~reqNotifyPlayerNameDefaultTypeInternal() {}
+  union {
+    reqNotifyPlayerName _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 reqNotifyPlayerNameDefaultTypeInternal _reqNotifyPlayerName_default_instance_;
 PROTOBUF_CONSTEXPR reqPlayerPosition::reqPlayerPosition(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
@@ -221,8 +234,9 @@ struct resInventoryItemsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 resInventoryItemsDefaultTypeInternal _resInventoryItems_default_instance_;
 PROTOBUF_CONSTEXPR itemInfo::itemInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.itemname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.itemname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.itemdesc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.itemid_)*/0
   , /*decltype(_impl_.count_)*/0u
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct itemInfoDefaultTypeInternal {
@@ -234,8 +248,104 @@ struct itemInfoDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 itemInfoDefaultTypeInternal _itemInfo_default_instance_;
+PROTOBUF_CONSTEXPR reqShopItemList::reqShopItemList(
+    ::_pbi::ConstantInitialized) {}
+struct reqShopItemListDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR reqShopItemListDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~reqShopItemListDefaultTypeInternal() {}
+  union {
+    reqShopItemList _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 reqShopItemListDefaultTypeInternal _reqShopItemList_default_instance_;
+PROTOBUF_CONSTEXPR resShopItemList::resShopItemList(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.items_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct resShopItemListDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR resShopItemListDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~resShopItemListDefaultTypeInternal() {}
+  union {
+    resShopItemList _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 resShopItemListDefaultTypeInternal _resShopItemList_default_instance_;
+PROTOBUF_CONSTEXPR shopItem::shopItem(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.itemname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.itemdesc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.itemid_)*/0
+  , /*decltype(_impl_.itemcount_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct shopItemDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR shopItemDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~shopItemDefaultTypeInternal() {}
+  union {
+    shopItem _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 shopItemDefaultTypeInternal _shopItem_default_instance_;
+PROTOBUF_CONSTEXPR reqShopBuy::reqShopBuy(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.playername_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.itemid_)*/0
+  , /*decltype(_impl_.count_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct reqShopBuyDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR reqShopBuyDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~reqShopBuyDefaultTypeInternal() {}
+  union {
+    reqShopBuy _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 reqShopBuyDefaultTypeInternal _reqShopBuy_default_instance_;
+PROTOBUF_CONSTEXPR resShopBuy::resShopBuy(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.success_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct resShopBuyDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR resShopBuyDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~resShopBuyDefaultTypeInternal() {}
+  union {
+    resShopBuy _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 resShopBuyDefaultTypeInternal _resShopBuy_default_instance_;
+PROTOBUF_CONSTEXPR reqShopSell::reqShopSell(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.playername_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.itemid_)*/0
+  , /*decltype(_impl_.count_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct reqShopSellDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR reqShopSellDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~reqShopSellDefaultTypeInternal() {}
+  union {
+    reqShopSell _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 reqShopSellDefaultTypeInternal _reqShopSell_default_instance_;
+PROTOBUF_CONSTEXPR resShopSell::resShopSell(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.success_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct resShopSellDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR resShopSellDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~resShopSellDefaultTypeInternal() {}
+  union {
+    resShopSell _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 resShopSellDefaultTypeInternal _resShopSell_default_instance_;
 }  // namespace CKPacket
-static ::_pb::Metadata file_level_metadata_item_2eproto[16];
+static ::_pb::Metadata file_level_metadata_item_2eproto[24];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_item_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_item_2eproto = nullptr;
 
@@ -258,6 +368,13 @@ const uint32_t TableStruct_item_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(pro
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqNotifyPlayerName, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqNotifyPlayerName, _impl_.name_),
   PROTOBUF_FIELD_OFFSET(::CKPacket::reqPlayerPosition, _impl_._has_bits_),
   PROTOBUF_FIELD_OFFSET(::CKPacket::reqPlayerPosition, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -364,33 +481,98 @@ const uint32_t TableStruct_item_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(pro
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CKPacket::itemInfo, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::itemInfo, _impl_.itemid_),
   PROTOBUF_FIELD_OFFSET(::CKPacket::itemInfo, _impl_.itemname_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::itemInfo, _impl_.itemdesc_),
   PROTOBUF_FIELD_OFFSET(::CKPacket::itemInfo, _impl_.count_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopItemList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resShopItemList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resShopItemList, _impl_.items_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::shopItem, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::shopItem, _impl_.itemid_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::shopItem, _impl_.itemname_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::shopItem, _impl_.itemdesc_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::shopItem, _impl_.itemcount_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopBuy, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopBuy, _impl_.playername_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopBuy, _impl_.itemid_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopBuy, _impl_.count_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resShopBuy, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resShopBuy, _impl_.success_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopSell, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopSell, _impl_.playername_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopSell, _impl_.itemid_),
+  PROTOBUF_FIELD_OFFSET(::CKPacket::reqShopSell, _impl_.count_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resShopSell, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::CKPacket::resShopSell, _impl_.success_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::CKPacket::resPlayerJoin)},
   { 6, -1, -1, sizeof(::CKPacket::reqPing)},
   { 12, -1, -1, sizeof(::CKPacket::resPing)},
-  { 18, 28, -1, sizeof(::CKPacket::reqPlayerPosition)},
-  { 32, 42, -1, sizeof(::CKPacket::resPlayerPosition)},
-  { 46, 53, -1, sizeof(::CKPacket::resReplicatedPlayerGen)},
-  { 54, 61, -1, sizeof(::CKPacket::resReplicatedPlayerDes)},
-  { 62, -1, -1, sizeof(::CKPacket::reqReplicatedPlayerGen)},
-  { 68, 75, -1, sizeof(::CKPacket::reqReplicatedPlayerDes)},
-  { 76, -1, -1, sizeof(::CKPacket::reqAddToItem)},
-  { 83, -1, -1, sizeof(::CKPacket::resAddToItem)},
-  { 90, -1, -1, sizeof(::CKPacket::reqRemoveFromItem)},
-  { 97, -1, -1, sizeof(::CKPacket::resRemoveFromToItem)},
-  { 104, -1, -1, sizeof(::CKPacket::reqInventoryItems)},
-  { 111, -1, -1, sizeof(::CKPacket::resInventoryItems)},
-  { 118, -1, -1, sizeof(::CKPacket::itemInfo)},
+  { 18, -1, -1, sizeof(::CKPacket::reqNotifyPlayerName)},
+  { 25, 35, -1, sizeof(::CKPacket::reqPlayerPosition)},
+  { 39, 49, -1, sizeof(::CKPacket::resPlayerPosition)},
+  { 53, 60, -1, sizeof(::CKPacket::resReplicatedPlayerGen)},
+  { 61, 68, -1, sizeof(::CKPacket::resReplicatedPlayerDes)},
+  { 69, -1, -1, sizeof(::CKPacket::reqReplicatedPlayerGen)},
+  { 75, 82, -1, sizeof(::CKPacket::reqReplicatedPlayerDes)},
+  { 83, -1, -1, sizeof(::CKPacket::reqAddToItem)},
+  { 90, -1, -1, sizeof(::CKPacket::resAddToItem)},
+  { 97, -1, -1, sizeof(::CKPacket::reqRemoveFromItem)},
+  { 104, -1, -1, sizeof(::CKPacket::resRemoveFromToItem)},
+  { 111, -1, -1, sizeof(::CKPacket::reqInventoryItems)},
+  { 118, -1, -1, sizeof(::CKPacket::resInventoryItems)},
+  { 125, -1, -1, sizeof(::CKPacket::itemInfo)},
+  { 135, -1, -1, sizeof(::CKPacket::reqShopItemList)},
+  { 141, -1, -1, sizeof(::CKPacket::resShopItemList)},
+  { 148, -1, -1, sizeof(::CKPacket::shopItem)},
+  { 158, -1, -1, sizeof(::CKPacket::reqShopBuy)},
+  { 167, -1, -1, sizeof(::CKPacket::resShopBuy)},
+  { 174, -1, -1, sizeof(::CKPacket::reqShopSell)},
+  { 183, -1, -1, sizeof(::CKPacket::resShopSell)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
   &::CKPacket::_resPlayerJoin_default_instance_._instance,
   &::CKPacket::_reqPing_default_instance_._instance,
   &::CKPacket::_resPing_default_instance_._instance,
+  &::CKPacket::_reqNotifyPlayerName_default_instance_._instance,
   &::CKPacket::_reqPlayerPosition_default_instance_._instance,
   &::CKPacket::_resPlayerPosition_default_instance_._instance,
   &::CKPacket::_resReplicatedPlayerGen_default_instance_._instance,
@@ -404,37 +586,54 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::CKPacket::_reqInventoryItems_default_instance_._instance,
   &::CKPacket::_resInventoryItems_default_instance_._instance,
   &::CKPacket::_itemInfo_default_instance_._instance,
+  &::CKPacket::_reqShopItemList_default_instance_._instance,
+  &::CKPacket::_resShopItemList_default_instance_._instance,
+  &::CKPacket::_shopItem_default_instance_._instance,
+  &::CKPacket::_reqShopBuy_default_instance_._instance,
+  &::CKPacket::_resShopBuy_default_instance_._instance,
+  &::CKPacket::_reqShopSell_default_instance_._instance,
+  &::CKPacket::_resShopSell_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_item_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\nitem.proto\022\010CKPacket\"\017\n\rresPlayerJoin\""
-  "\t\n\007reqPing\"\t\n\007resPing\"s\n\021reqPlayerPositi"
-  "on\022\016\n\001x\030\001 \001(\002H\000\210\001\001\022\016\n\001y\030\002 \001(\002H\001\210\001\001\022\016\n\001z\030"
-  "\003 \001(\002H\002\210\001\001\022\022\n\005index\030\004 \001(\005H\003\210\001\001B\004\n\002_xB\004\n\002"
-  "_yB\004\n\002_zB\010\n\006_index\"s\n\021resPlayerPosition\022"
+  "\t\n\007reqPing\"\t\n\007resPing\"#\n\023reqNotifyPlayer"
+  "Name\022\014\n\004name\030\001 \001(\t\"s\n\021reqPlayerPosition\022"
   "\016\n\001x\030\001 \001(\002H\000\210\001\001\022\016\n\001y\030\002 \001(\002H\001\210\001\001\022\016\n\001z\030\003 \001"
   "(\002H\002\210\001\001\022\022\n\005index\030\004 \001(\005H\003\210\001\001B\004\n\002_xB\004\n\002_yB"
-  "\004\n\002_zB\010\n\006_index\"6\n\026resReplicatedPlayerGe"
-  "n\022\022\n\005index\030\001 \001(\005H\000\210\001\001B\010\n\006_index\"6\n\026resRe"
-  "plicatedPlayerDes\022\022\n\005index\030\001 \001(\005H\000\210\001\001B\010\n"
-  "\006_index\"\030\n\026reqReplicatedPlayerGen\"6\n\026req"
-  "ReplicatedPlayerDes\022\022\n\005index\030\001 \001(\005H\000\210\001\001B"
-  "\010\n\006_index\"0\n\014reqAddToItem\022 \n\004item\030\001 \001(\0132"
-  "\022.CKPacket.itemInfo\"0\n\014resAddToItem\022 \n\004i"
-  "tem\030\001 \001(\0132\022.CKPacket.itemInfo\"5\n\021reqRemo"
-  "veFromItem\022 \n\004item\030\001 \001(\0132\022.CKPacket.item"
-  "Info\"7\n\023resRemoveFromToItem\022 \n\004item\030\001 \001("
-  "\0132\022.CKPacket.itemInfo\"!\n\021reqInventoryIte"
-  "ms\022\014\n\004name\030\001 \001(\t\"6\n\021resInventoryItems\022!\n"
-  "\005items\030\001 \003(\0132\022.CKPacket.itemInfo\"9\n\010item"
-  "Info\022\014\n\004name\030\001 \001(\t\022\020\n\010itemName\030\002 \001(\t\022\r\n\005"
-  "count\030\003 \001(\rb\006proto3"
+  "\004\n\002_zB\010\n\006_index\"s\n\021resPlayerPosition\022\016\n\001"
+  "x\030\001 \001(\002H\000\210\001\001\022\016\n\001y\030\002 \001(\002H\001\210\001\001\022\016\n\001z\030\003 \001(\002H"
+  "\002\210\001\001\022\022\n\005index\030\004 \001(\005H\003\210\001\001B\004\n\002_xB\004\n\002_yB\004\n\002"
+  "_zB\010\n\006_index\"6\n\026resReplicatedPlayerGen\022\022"
+  "\n\005index\030\001 \001(\005H\000\210\001\001B\010\n\006_index\"6\n\026resRepli"
+  "catedPlayerDes\022\022\n\005index\030\001 \001(\005H\000\210\001\001B\010\n\006_i"
+  "ndex\"\030\n\026reqReplicatedPlayerGen\"6\n\026reqRep"
+  "licatedPlayerDes\022\022\n\005index\030\001 \001(\005H\000\210\001\001B\010\n\006"
+  "_index\"0\n\014reqAddToItem\022 \n\004item\030\001 \001(\0132\022.C"
+  "KPacket.itemInfo\"0\n\014resAddToItem\022 \n\004item"
+  "\030\001 \001(\0132\022.CKPacket.itemInfo\"5\n\021reqRemoveF"
+  "romItem\022 \n\004item\030\001 \001(\0132\022.CKPacket.itemInf"
+  "o\"7\n\023resRemoveFromToItem\022 \n\004item\030\001 \001(\0132\022"
+  ".CKPacket.itemInfo\"!\n\021reqInventoryItems\022"
+  "\014\n\004name\030\001 \001(\t\"6\n\021resInventoryItems\022!\n\005it"
+  "ems\030\001 \003(\0132\022.CKPacket.itemInfo\"M\n\010itemInf"
+  "o\022\016\n\006itemid\030\001 \001(\005\022\020\n\010itemName\030\002 \001(\t\022\020\n\010i"
+  "temDesc\030\003 \001(\t\022\r\n\005count\030\004 \001(\r\"\021\n\017reqShopI"
+  "temList\"4\n\017resShopItemList\022!\n\005items\030\001 \003("
+  "\0132\022.CKPacket.shopItem\"Q\n\010shopItem\022\016\n\006ite"
+  "mId\030\001 \001(\005\022\020\n\010itemName\030\002 \001(\t\022\020\n\010itemDesc\030"
+  "\003 \001(\t\022\021\n\titemCount\030\004 \001(\005\"\?\n\nreqShopBuy\022\022"
+  "\n\nplayerName\030\001 \001(\t\022\016\n\006itemID\030\002 \001(\005\022\r\n\005co"
+  "unt\030\003 \001(\005\"\035\n\nresShopBuy\022\017\n\007success\030\001 \001(\010"
+  "\"@\n\013reqShopSell\022\022\n\nplayerName\030\001 \001(\t\022\016\n\006i"
+  "temID\030\002 \001(\005\022\r\n\005count\030\003 \001(\005\"\036\n\013resShopSel"
+  "l\022\017\n\007success\030\001 \001(\010b\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_item_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_item_2eproto = {
-    false, false, 859, descriptor_table_protodef_item_2eproto,
+    false, false, 1266, descriptor_table_protodef_item_2eproto,
     "item.proto",
-    &descriptor_table_item_2eproto_once, nullptr, 0, 16,
+    &descriptor_table_item_2eproto_once, nullptr, 0, 24,
     schemas, file_default_instances, TableStruct_item_2eproto::offsets,
     file_level_metadata_item_2eproto, file_level_enum_descriptors_item_2eproto,
     file_level_service_descriptors_item_2eproto,
@@ -565,6 +764,209 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*resPing::GetClassData() const 
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
       file_level_metadata_item_2eproto[2]);
+}
+
+// ===================================================================
+
+class reqNotifyPlayerName::_Internal {
+ public:
+};
+
+reqNotifyPlayerName::reqNotifyPlayerName(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.reqNotifyPlayerName)
+}
+reqNotifyPlayerName::reqNotifyPlayerName(const reqNotifyPlayerName& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  reqNotifyPlayerName* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.name_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_name().empty()) {
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:CKPacket.reqNotifyPlayerName)
+}
+
+inline void reqNotifyPlayerName::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.name_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+reqNotifyPlayerName::~reqNotifyPlayerName() {
+  // @@protoc_insertion_point(destructor:CKPacket.reqNotifyPlayerName)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void reqNotifyPlayerName::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+}
+
+void reqNotifyPlayerName::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void reqNotifyPlayerName::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.reqNotifyPlayerName)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.name_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* reqNotifyPlayerName::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "CKPacket.reqNotifyPlayerName.name"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* reqNotifyPlayerName::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.reqNotifyPlayerName)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (!this->_internal_name().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "CKPacket.reqNotifyPlayerName.name");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.reqNotifyPlayerName)
+  return target;
+}
+
+size_t reqNotifyPlayerName::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.reqNotifyPlayerName)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (!this->_internal_name().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData reqNotifyPlayerName::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    reqNotifyPlayerName::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*reqNotifyPlayerName::GetClassData() const { return &_class_data_; }
+
+
+void reqNotifyPlayerName::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<reqNotifyPlayerName*>(&to_msg);
+  auto& from = static_cast<const reqNotifyPlayerName&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.reqNotifyPlayerName)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_name().empty()) {
+    _this->_internal_set_name(from._internal_name());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void reqNotifyPlayerName::CopyFrom(const reqNotifyPlayerName& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.reqNotifyPlayerName)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool reqNotifyPlayerName::IsInitialized() const {
+  return true;
+}
+
+void reqNotifyPlayerName::InternalSwap(reqNotifyPlayerName* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata reqNotifyPlayerName::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[3]);
 }
 
 // ===================================================================
@@ -856,7 +1258,7 @@ void reqPlayerPosition::InternalSwap(reqPlayerPosition* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata reqPlayerPosition::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[3]);
+      file_level_metadata_item_2eproto[4]);
 }
 
 // ===================================================================
@@ -1148,7 +1550,7 @@ void resPlayerPosition::InternalSwap(resPlayerPosition* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata resPlayerPosition::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[4]);
+      file_level_metadata_item_2eproto[5]);
 }
 
 // ===================================================================
@@ -1338,7 +1740,7 @@ void resReplicatedPlayerGen::InternalSwap(resReplicatedPlayerGen* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata resReplicatedPlayerGen::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[5]);
+      file_level_metadata_item_2eproto[6]);
 }
 
 // ===================================================================
@@ -1528,7 +1930,7 @@ void resReplicatedPlayerDes::InternalSwap(resReplicatedPlayerDes* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata resReplicatedPlayerDes::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[6]);
+      file_level_metadata_item_2eproto[7]);
 }
 
 // ===================================================================
@@ -1568,7 +1970,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*reqReplicatedPlayerGen::GetCla
 ::PROTOBUF_NAMESPACE_ID::Metadata reqReplicatedPlayerGen::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[7]);
+      file_level_metadata_item_2eproto[8]);
 }
 
 // ===================================================================
@@ -1758,7 +2160,7 @@ void reqReplicatedPlayerDes::InternalSwap(reqReplicatedPlayerDes* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata reqReplicatedPlayerDes::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[8]);
+      file_level_metadata_item_2eproto[9]);
 }
 
 // ===================================================================
@@ -1951,7 +2353,7 @@ void reqAddToItem::InternalSwap(reqAddToItem* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata reqAddToItem::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[9]);
+      file_level_metadata_item_2eproto[10]);
 }
 
 // ===================================================================
@@ -2144,7 +2546,7 @@ void resAddToItem::InternalSwap(resAddToItem* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata resAddToItem::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[10]);
+      file_level_metadata_item_2eproto[11]);
 }
 
 // ===================================================================
@@ -2337,7 +2739,7 @@ void reqRemoveFromItem::InternalSwap(reqRemoveFromItem* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata reqRemoveFromItem::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[11]);
+      file_level_metadata_item_2eproto[12]);
 }
 
 // ===================================================================
@@ -2530,7 +2932,7 @@ void resRemoveFromToItem::InternalSwap(resRemoveFromToItem* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata resRemoveFromToItem::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[12]);
+      file_level_metadata_item_2eproto[13]);
 }
 
 // ===================================================================
@@ -2733,7 +3135,7 @@ void reqInventoryItems::InternalSwap(reqInventoryItems* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata reqInventoryItems::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[13]);
+      file_level_metadata_item_2eproto[14]);
 }
 
 // ===================================================================
@@ -2918,7 +3320,7 @@ void resInventoryItems::InternalSwap(resInventoryItems* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata resInventoryItems::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[14]);
+      file_level_metadata_item_2eproto[15]);
 }
 
 // ===================================================================
@@ -2937,20 +3339,13 @@ itemInfo::itemInfo(const itemInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   itemInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.name_){}
-    , decltype(_impl_.itemname_){}
+      decltype(_impl_.itemname_){}
+    , decltype(_impl_.itemdesc_){}
+    , decltype(_impl_.itemid_){}
     , decltype(_impl_.count_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_name().empty()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.itemname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.itemname_.Set("", GetArenaForAllocation());
@@ -2959,7 +3354,17 @@ itemInfo::itemInfo(const itemInfo& from)
     _this->_impl_.itemname_.Set(from._internal_itemname(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.count_ = from._impl_.count_;
+  _impl_.itemdesc_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.itemdesc_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_itemdesc().empty()) {
+    _this->_impl_.itemdesc_.Set(from._internal_itemdesc(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.itemid_, &from._impl_.itemid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.count_) -
+    reinterpret_cast<char*>(&_impl_.itemid_)) + sizeof(_impl_.count_));
   // @@protoc_insertion_point(copy_constructor:CKPacket.itemInfo)
 }
 
@@ -2968,18 +3373,19 @@ inline void itemInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.name_){}
-    , decltype(_impl_.itemname_){}
+      decltype(_impl_.itemname_){}
+    , decltype(_impl_.itemdesc_){}
+    , decltype(_impl_.itemid_){0}
     , decltype(_impl_.count_){0u}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.itemname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.itemname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.itemdesc_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.itemdesc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2994,8 +3400,8 @@ itemInfo::~itemInfo() {
 
 inline void itemInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
   _impl_.itemname_.Destroy();
+  _impl_.itemdesc_.Destroy();
 }
 
 void itemInfo::SetCachedSize(int size) const {
@@ -3008,9 +3414,11 @@ void itemInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.name_.ClearToEmpty();
   _impl_.itemname_.ClearToEmpty();
-  _impl_.count_ = 0u;
+  _impl_.itemdesc_.ClearToEmpty();
+  ::memset(&_impl_.itemid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.count_) -
+      reinterpret_cast<char*>(&_impl_.itemid_)) + sizeof(_impl_.count_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -3020,13 +3428,11 @@ const char* itemInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string name = 1;
+      // int32 itemid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_name();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.itemid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "CKPacket.itemInfo.name"));
         } else
           goto handle_unusual;
         continue;
@@ -3040,9 +3446,19 @@ const char* itemInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // uint32 count = 3;
+      // string itemDesc = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_itemdesc();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "CKPacket.itemInfo.itemDesc"));
+        } else
+          goto handle_unusual;
+        continue;
+      // uint32 count = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _impl_.count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -3077,14 +3493,10 @@ uint8_t* itemInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1;
-  if (!this->_internal_name().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "CKPacket.itemInfo.name");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_name(), target);
+  // int32 itemid = 1;
+  if (this->_internal_itemid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_itemid(), target);
   }
 
   // string itemName = 2;
@@ -3097,10 +3509,20 @@ uint8_t* itemInfo::_InternalSerialize(
         2, this->_internal_itemname(), target);
   }
 
-  // uint32 count = 3;
+  // string itemDesc = 3;
+  if (!this->_internal_itemdesc().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_itemdesc().data(), static_cast<int>(this->_internal_itemdesc().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "CKPacket.itemInfo.itemDesc");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_itemdesc(), target);
+  }
+
+  // uint32 count = 4;
   if (this->_internal_count() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_count(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_count(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3119,13 +3541,6 @@ size_t itemInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string name = 1;
-  if (!this->_internal_name().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_name());
-  }
-
   // string itemName = 2;
   if (!this->_internal_itemname().empty()) {
     total_size += 1 +
@@ -3133,7 +3548,19 @@ size_t itemInfo::ByteSizeLong() const {
         this->_internal_itemname());
   }
 
-  // uint32 count = 3;
+  // string itemDesc = 3;
+  if (!this->_internal_itemdesc().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_itemdesc());
+  }
+
+  // int32 itemid = 1;
+  if (this->_internal_itemid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_itemid());
+  }
+
+  // uint32 count = 4;
   if (this->_internal_count() != 0) {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_count());
   }
@@ -3156,11 +3583,14 @@ void itemInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTO
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_name().empty()) {
-    _this->_internal_set_name(from._internal_name());
-  }
   if (!from._internal_itemname().empty()) {
     _this->_internal_set_itemname(from._internal_itemname());
+  }
+  if (!from._internal_itemdesc().empty()) {
+    _this->_internal_set_itemdesc(from._internal_itemdesc());
+  }
+  if (from._internal_itemid() != 0) {
+    _this->_internal_set_itemid(from._internal_itemid());
   }
   if (from._internal_count() != 0) {
     _this->_internal_set_count(from._internal_count());
@@ -3185,20 +3615,1445 @@ void itemInfo::InternalSwap(itemInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.itemname_, lhs_arena,
       &other->_impl_.itemname_, rhs_arena
   );
-  swap(_impl_.count_, other->_impl_.count_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.itemdesc_, lhs_arena,
+      &other->_impl_.itemdesc_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(itemInfo, _impl_.count_)
+      + sizeof(itemInfo::_impl_.count_)
+      - PROTOBUF_FIELD_OFFSET(itemInfo, _impl_.itemid_)>(
+          reinterpret_cast<char*>(&_impl_.itemid_),
+          reinterpret_cast<char*>(&other->_impl_.itemid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata itemInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
-      file_level_metadata_item_2eproto[15]);
+      file_level_metadata_item_2eproto[16]);
+}
+
+// ===================================================================
+
+class reqShopItemList::_Internal {
+ public:
+};
+
+reqShopItemList::reqShopItemList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:CKPacket.reqShopItemList)
+}
+reqShopItemList::reqShopItemList(const reqShopItemList& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  reqShopItemList* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:CKPacket.reqShopItemList)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData reqShopItemList::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*reqShopItemList::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata reqShopItemList::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[17]);
+}
+
+// ===================================================================
+
+class resShopItemList::_Internal {
+ public:
+};
+
+resShopItemList::resShopItemList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.resShopItemList)
+}
+resShopItemList::resShopItemList(const resShopItemList& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  resShopItemList* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.items_){from._impl_.items_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:CKPacket.resShopItemList)
+}
+
+inline void resShopItemList::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.items_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+resShopItemList::~resShopItemList() {
+  // @@protoc_insertion_point(destructor:CKPacket.resShopItemList)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void resShopItemList::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.items_.~RepeatedPtrField();
+}
+
+void resShopItemList::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void resShopItemList::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.resShopItemList)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.items_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* resShopItemList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .CKPacket.shopItem items = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_items(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* resShopItemList::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.resShopItemList)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .CKPacket.shopItem items = 1;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_items_size()); i < n; i++) {
+    const auto& repfield = this->_internal_items(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.resShopItemList)
+  return target;
+}
+
+size_t resShopItemList::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.resShopItemList)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .CKPacket.shopItem items = 1;
+  total_size += 1UL * this->_internal_items_size();
+  for (const auto& msg : this->_impl_.items_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData resShopItemList::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    resShopItemList::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*resShopItemList::GetClassData() const { return &_class_data_; }
+
+
+void resShopItemList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<resShopItemList*>(&to_msg);
+  auto& from = static_cast<const resShopItemList&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.resShopItemList)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.items_.MergeFrom(from._impl_.items_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void resShopItemList::CopyFrom(const resShopItemList& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.resShopItemList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool resShopItemList::IsInitialized() const {
+  return true;
+}
+
+void resShopItemList::InternalSwap(resShopItemList* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.items_.InternalSwap(&other->_impl_.items_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata resShopItemList::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[18]);
+}
+
+// ===================================================================
+
+class shopItem::_Internal {
+ public:
+};
+
+shopItem::shopItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.shopItem)
+}
+shopItem::shopItem(const shopItem& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  shopItem* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.itemname_){}
+    , decltype(_impl_.itemdesc_){}
+    , decltype(_impl_.itemid_){}
+    , decltype(_impl_.itemcount_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.itemname_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.itemname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_itemname().empty()) {
+    _this->_impl_.itemname_.Set(from._internal_itemname(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.itemdesc_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.itemdesc_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_itemdesc().empty()) {
+    _this->_impl_.itemdesc_.Set(from._internal_itemdesc(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.itemid_, &from._impl_.itemid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.itemcount_) -
+    reinterpret_cast<char*>(&_impl_.itemid_)) + sizeof(_impl_.itemcount_));
+  // @@protoc_insertion_point(copy_constructor:CKPacket.shopItem)
+}
+
+inline void shopItem::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.itemname_){}
+    , decltype(_impl_.itemdesc_){}
+    , decltype(_impl_.itemid_){0}
+    , decltype(_impl_.itemcount_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.itemname_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.itemname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.itemdesc_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.itemdesc_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+shopItem::~shopItem() {
+  // @@protoc_insertion_point(destructor:CKPacket.shopItem)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void shopItem::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.itemname_.Destroy();
+  _impl_.itemdesc_.Destroy();
+}
+
+void shopItem::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void shopItem::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.shopItem)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.itemname_.ClearToEmpty();
+  _impl_.itemdesc_.ClearToEmpty();
+  ::memset(&_impl_.itemid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.itemcount_) -
+      reinterpret_cast<char*>(&_impl_.itemid_)) + sizeof(_impl_.itemcount_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* shopItem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 itemId = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.itemid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string itemName = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_itemname();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "CKPacket.shopItem.itemName"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string itemDesc = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_itemdesc();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "CKPacket.shopItem.itemDesc"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 itemCount = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.itemcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* shopItem::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.shopItem)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 itemId = 1;
+  if (this->_internal_itemid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_itemid(), target);
+  }
+
+  // string itemName = 2;
+  if (!this->_internal_itemname().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_itemname().data(), static_cast<int>(this->_internal_itemname().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "CKPacket.shopItem.itemName");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_itemname(), target);
+  }
+
+  // string itemDesc = 3;
+  if (!this->_internal_itemdesc().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_itemdesc().data(), static_cast<int>(this->_internal_itemdesc().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "CKPacket.shopItem.itemDesc");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_itemdesc(), target);
+  }
+
+  // int32 itemCount = 4;
+  if (this->_internal_itemcount() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_itemcount(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.shopItem)
+  return target;
+}
+
+size_t shopItem::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.shopItem)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string itemName = 2;
+  if (!this->_internal_itemname().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_itemname());
+  }
+
+  // string itemDesc = 3;
+  if (!this->_internal_itemdesc().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_itemdesc());
+  }
+
+  // int32 itemId = 1;
+  if (this->_internal_itemid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_itemid());
+  }
+
+  // int32 itemCount = 4;
+  if (this->_internal_itemcount() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_itemcount());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData shopItem::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    shopItem::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*shopItem::GetClassData() const { return &_class_data_; }
+
+
+void shopItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<shopItem*>(&to_msg);
+  auto& from = static_cast<const shopItem&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.shopItem)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_itemname().empty()) {
+    _this->_internal_set_itemname(from._internal_itemname());
+  }
+  if (!from._internal_itemdesc().empty()) {
+    _this->_internal_set_itemdesc(from._internal_itemdesc());
+  }
+  if (from._internal_itemid() != 0) {
+    _this->_internal_set_itemid(from._internal_itemid());
+  }
+  if (from._internal_itemcount() != 0) {
+    _this->_internal_set_itemcount(from._internal_itemcount());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void shopItem::CopyFrom(const shopItem& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.shopItem)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool shopItem::IsInitialized() const {
+  return true;
+}
+
+void shopItem::InternalSwap(shopItem* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.itemname_, lhs_arena,
+      &other->_impl_.itemname_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.itemdesc_, lhs_arena,
+      &other->_impl_.itemdesc_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(shopItem, _impl_.itemcount_)
+      + sizeof(shopItem::_impl_.itemcount_)
+      - PROTOBUF_FIELD_OFFSET(shopItem, _impl_.itemid_)>(
+          reinterpret_cast<char*>(&_impl_.itemid_),
+          reinterpret_cast<char*>(&other->_impl_.itemid_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata shopItem::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[19]);
+}
+
+// ===================================================================
+
+class reqShopBuy::_Internal {
+ public:
+};
+
+reqShopBuy::reqShopBuy(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.reqShopBuy)
+}
+reqShopBuy::reqShopBuy(const reqShopBuy& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  reqShopBuy* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.playername_){}
+    , decltype(_impl_.itemid_){}
+    , decltype(_impl_.count_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.playername_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.playername_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_playername().empty()) {
+    _this->_impl_.playername_.Set(from._internal_playername(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.itemid_, &from._impl_.itemid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.count_) -
+    reinterpret_cast<char*>(&_impl_.itemid_)) + sizeof(_impl_.count_));
+  // @@protoc_insertion_point(copy_constructor:CKPacket.reqShopBuy)
+}
+
+inline void reqShopBuy::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.playername_){}
+    , decltype(_impl_.itemid_){0}
+    , decltype(_impl_.count_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.playername_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.playername_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+reqShopBuy::~reqShopBuy() {
+  // @@protoc_insertion_point(destructor:CKPacket.reqShopBuy)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void reqShopBuy::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.playername_.Destroy();
+}
+
+void reqShopBuy::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void reqShopBuy::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.reqShopBuy)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.playername_.ClearToEmpty();
+  ::memset(&_impl_.itemid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.count_) -
+      reinterpret_cast<char*>(&_impl_.itemid_)) + sizeof(_impl_.count_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* reqShopBuy::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string playerName = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_playername();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "CKPacket.reqShopBuy.playerName"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 itemID = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.itemid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 count = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* reqShopBuy::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.reqShopBuy)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string playerName = 1;
+  if (!this->_internal_playername().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_playername().data(), static_cast<int>(this->_internal_playername().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "CKPacket.reqShopBuy.playerName");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_playername(), target);
+  }
+
+  // int32 itemID = 2;
+  if (this->_internal_itemid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_itemid(), target);
+  }
+
+  // int32 count = 3;
+  if (this->_internal_count() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_count(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.reqShopBuy)
+  return target;
+}
+
+size_t reqShopBuy::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.reqShopBuy)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string playerName = 1;
+  if (!this->_internal_playername().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_playername());
+  }
+
+  // int32 itemID = 2;
+  if (this->_internal_itemid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_itemid());
+  }
+
+  // int32 count = 3;
+  if (this->_internal_count() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_count());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData reqShopBuy::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    reqShopBuy::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*reqShopBuy::GetClassData() const { return &_class_data_; }
+
+
+void reqShopBuy::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<reqShopBuy*>(&to_msg);
+  auto& from = static_cast<const reqShopBuy&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.reqShopBuy)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_playername().empty()) {
+    _this->_internal_set_playername(from._internal_playername());
+  }
+  if (from._internal_itemid() != 0) {
+    _this->_internal_set_itemid(from._internal_itemid());
+  }
+  if (from._internal_count() != 0) {
+    _this->_internal_set_count(from._internal_count());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void reqShopBuy::CopyFrom(const reqShopBuy& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.reqShopBuy)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool reqShopBuy::IsInitialized() const {
+  return true;
+}
+
+void reqShopBuy::InternalSwap(reqShopBuy* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.playername_, lhs_arena,
+      &other->_impl_.playername_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(reqShopBuy, _impl_.count_)
+      + sizeof(reqShopBuy::_impl_.count_)
+      - PROTOBUF_FIELD_OFFSET(reqShopBuy, _impl_.itemid_)>(
+          reinterpret_cast<char*>(&_impl_.itemid_),
+          reinterpret_cast<char*>(&other->_impl_.itemid_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata reqShopBuy::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[20]);
+}
+
+// ===================================================================
+
+class resShopBuy::_Internal {
+ public:
+};
+
+resShopBuy::resShopBuy(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.resShopBuy)
+}
+resShopBuy::resShopBuy(const resShopBuy& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  resShopBuy* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.success_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.success_ = from._impl_.success_;
+  // @@protoc_insertion_point(copy_constructor:CKPacket.resShopBuy)
+}
+
+inline void resShopBuy::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.success_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+resShopBuy::~resShopBuy() {
+  // @@protoc_insertion_point(destructor:CKPacket.resShopBuy)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void resShopBuy::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void resShopBuy::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void resShopBuy::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.resShopBuy)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.success_ = false;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* resShopBuy::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // bool success = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.success_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* resShopBuy::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.resShopBuy)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool success = 1;
+  if (this->_internal_success() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_success(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.resShopBuy)
+  return target;
+}
+
+size_t resShopBuy::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.resShopBuy)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // bool success = 1;
+  if (this->_internal_success() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData resShopBuy::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    resShopBuy::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*resShopBuy::GetClassData() const { return &_class_data_; }
+
+
+void resShopBuy::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<resShopBuy*>(&to_msg);
+  auto& from = static_cast<const resShopBuy&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.resShopBuy)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_success() != 0) {
+    _this->_internal_set_success(from._internal_success());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void resShopBuy::CopyFrom(const resShopBuy& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.resShopBuy)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool resShopBuy::IsInitialized() const {
+  return true;
+}
+
+void resShopBuy::InternalSwap(resShopBuy* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.success_, other->_impl_.success_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata resShopBuy::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[21]);
+}
+
+// ===================================================================
+
+class reqShopSell::_Internal {
+ public:
+};
+
+reqShopSell::reqShopSell(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.reqShopSell)
+}
+reqShopSell::reqShopSell(const reqShopSell& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  reqShopSell* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.playername_){}
+    , decltype(_impl_.itemid_){}
+    , decltype(_impl_.count_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.playername_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.playername_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_playername().empty()) {
+    _this->_impl_.playername_.Set(from._internal_playername(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.itemid_, &from._impl_.itemid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.count_) -
+    reinterpret_cast<char*>(&_impl_.itemid_)) + sizeof(_impl_.count_));
+  // @@protoc_insertion_point(copy_constructor:CKPacket.reqShopSell)
+}
+
+inline void reqShopSell::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.playername_){}
+    , decltype(_impl_.itemid_){0}
+    , decltype(_impl_.count_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.playername_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.playername_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+reqShopSell::~reqShopSell() {
+  // @@protoc_insertion_point(destructor:CKPacket.reqShopSell)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void reqShopSell::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.playername_.Destroy();
+}
+
+void reqShopSell::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void reqShopSell::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.reqShopSell)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.playername_.ClearToEmpty();
+  ::memset(&_impl_.itemid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.count_) -
+      reinterpret_cast<char*>(&_impl_.itemid_)) + sizeof(_impl_.count_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* reqShopSell::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string playerName = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_playername();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "CKPacket.reqShopSell.playerName"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 itemID = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.itemid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 count = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* reqShopSell::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.reqShopSell)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string playerName = 1;
+  if (!this->_internal_playername().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_playername().data(), static_cast<int>(this->_internal_playername().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "CKPacket.reqShopSell.playerName");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_playername(), target);
+  }
+
+  // int32 itemID = 2;
+  if (this->_internal_itemid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_itemid(), target);
+  }
+
+  // int32 count = 3;
+  if (this->_internal_count() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_count(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.reqShopSell)
+  return target;
+}
+
+size_t reqShopSell::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.reqShopSell)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string playerName = 1;
+  if (!this->_internal_playername().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_playername());
+  }
+
+  // int32 itemID = 2;
+  if (this->_internal_itemid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_itemid());
+  }
+
+  // int32 count = 3;
+  if (this->_internal_count() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_count());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData reqShopSell::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    reqShopSell::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*reqShopSell::GetClassData() const { return &_class_data_; }
+
+
+void reqShopSell::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<reqShopSell*>(&to_msg);
+  auto& from = static_cast<const reqShopSell&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.reqShopSell)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_playername().empty()) {
+    _this->_internal_set_playername(from._internal_playername());
+  }
+  if (from._internal_itemid() != 0) {
+    _this->_internal_set_itemid(from._internal_itemid());
+  }
+  if (from._internal_count() != 0) {
+    _this->_internal_set_count(from._internal_count());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void reqShopSell::CopyFrom(const reqShopSell& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.reqShopSell)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool reqShopSell::IsInitialized() const {
+  return true;
+}
+
+void reqShopSell::InternalSwap(reqShopSell* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.playername_, lhs_arena,
+      &other->_impl_.playername_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(reqShopSell, _impl_.count_)
+      + sizeof(reqShopSell::_impl_.count_)
+      - PROTOBUF_FIELD_OFFSET(reqShopSell, _impl_.itemid_)>(
+          reinterpret_cast<char*>(&_impl_.itemid_),
+          reinterpret_cast<char*>(&other->_impl_.itemid_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata reqShopSell::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[22]);
+}
+
+// ===================================================================
+
+class resShopSell::_Internal {
+ public:
+};
+
+resShopSell::resShopSell(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:CKPacket.resShopSell)
+}
+resShopSell::resShopSell(const resShopSell& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  resShopSell* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.success_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.success_ = from._impl_.success_;
+  // @@protoc_insertion_point(copy_constructor:CKPacket.resShopSell)
+}
+
+inline void resShopSell::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.success_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+resShopSell::~resShopSell() {
+  // @@protoc_insertion_point(destructor:CKPacket.resShopSell)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void resShopSell::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void resShopSell::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void resShopSell::Clear() {
+// @@protoc_insertion_point(message_clear_start:CKPacket.resShopSell)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.success_ = false;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* resShopSell::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // bool success = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.success_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* resShopSell::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:CKPacket.resShopSell)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool success = 1;
+  if (this->_internal_success() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_success(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:CKPacket.resShopSell)
+  return target;
+}
+
+size_t resShopSell::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:CKPacket.resShopSell)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // bool success = 1;
+  if (this->_internal_success() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData resShopSell::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    resShopSell::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*resShopSell::GetClassData() const { return &_class_data_; }
+
+
+void resShopSell::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<resShopSell*>(&to_msg);
+  auto& from = static_cast<const resShopSell&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CKPacket.resShopSell)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_success() != 0) {
+    _this->_internal_set_success(from._internal_success());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void resShopSell::CopyFrom(const resShopSell& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CKPacket.resShopSell)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool resShopSell::IsInitialized() const {
+  return true;
+}
+
+void resShopSell::InternalSwap(resShopSell* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.success_, other->_impl_.success_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata resShopSell::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_item_2eproto_getter, &descriptor_table_item_2eproto_once,
+      file_level_metadata_item_2eproto[23]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -3215,6 +5070,10 @@ Arena::CreateMaybeMessage< ::CKPacket::reqPing >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::CKPacket::resPing*
 Arena::CreateMaybeMessage< ::CKPacket::resPing >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CKPacket::resPing >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::reqNotifyPlayerName*
+Arena::CreateMaybeMessage< ::CKPacket::reqNotifyPlayerName >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::reqNotifyPlayerName >(arena);
 }
 template<> PROTOBUF_NOINLINE ::CKPacket::reqPlayerPosition*
 Arena::CreateMaybeMessage< ::CKPacket::reqPlayerPosition >(Arena* arena) {
@@ -3267,6 +5126,34 @@ Arena::CreateMaybeMessage< ::CKPacket::resInventoryItems >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::CKPacket::itemInfo*
 Arena::CreateMaybeMessage< ::CKPacket::itemInfo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CKPacket::itemInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::reqShopItemList*
+Arena::CreateMaybeMessage< ::CKPacket::reqShopItemList >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::reqShopItemList >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::resShopItemList*
+Arena::CreateMaybeMessage< ::CKPacket::resShopItemList >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::resShopItemList >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::shopItem*
+Arena::CreateMaybeMessage< ::CKPacket::shopItem >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::shopItem >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::reqShopBuy*
+Arena::CreateMaybeMessage< ::CKPacket::reqShopBuy >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::reqShopBuy >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::resShopBuy*
+Arena::CreateMaybeMessage< ::CKPacket::resShopBuy >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::resShopBuy >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::reqShopSell*
+Arena::CreateMaybeMessage< ::CKPacket::reqShopSell >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::reqShopSell >(arena);
+}
+template<> PROTOBUF_NOINLINE ::CKPacket::resShopSell*
+Arena::CreateMaybeMessage< ::CKPacket::resShopSell >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::CKPacket::resShopSell >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
